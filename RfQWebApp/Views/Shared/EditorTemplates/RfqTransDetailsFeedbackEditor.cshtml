@@ -1,0 +1,81 @@
+﻿@model RFQWebApp.Models.RfqTransactionDetails
+@*@Html.HiddenFor(model => model.Guid)*@
+@Html.HiddenFor(model => model.RfqNumber)
+@Html.HiddenFor(model => model.ItemName)
+@Html.HiddenFor(model => model.ItemDescription)
+@Html.HiddenFor(model => model.DrawingSpecification)
+@Html.HiddenFor(model => model.SupplierItemPN)
+@Html.HiddenFor(model => model.ItemNoOracleNo)
+@Html.HiddenFor(model => model.MachineModel)
+@Html.HiddenFor(model => model.SerialNo)
+@Html.HiddenFor(model => model.Quantity)
+@Html.HiddenFor(model => model.UoM)
+@Html.HiddenFor(model => model.IsRepeatOrderCode)
+@Html.HiddenFor(model => model.ReferencePrPo)
+@Html.HiddenFor(model => model.Remarks)
+@Html.HiddenFor(model => model.ItemStatusCode)
+@Html.HiddenFor(model => model.SupplierName)
+@Html.HiddenFor(model => model.Comments)
+@Html.HiddenFor(model => model.DateCreated)
+@Html.HiddenFor(model => model.DateModified)
+@Html.HiddenFor(model => model.DateAcknowledged)
+@Html.HiddenFor(model => model.DateCanvassed)
+@Html.HiddenFor(model => model.DateRejected)
+@Html.HiddenFor(model => model.DateCompleted)
+@Html.HiddenFor(model => model.CreatedBy)
+@Html.HiddenFor(model => model.ModifiedBy)
+@Html.HiddenFor(model => model.AcknowledgedBy)
+@Html.HiddenFor(model => model.CanvassedBy)
+@Html.HiddenFor(model => model.RejectedBy)
+@Html.HiddenFor(model => model.CompletedBy)
+@Html.ValidationSummary(true)
+<style type="text/css">
+    .rfqFeedback
+    {
+        border-color: #7bd2f6;
+    }
+    .table th, .table td
+    {
+        border-top: none !important;
+    }
+</style>
+<div class="container-fluid" id="form">
+    <table class="table">
+        <tr>
+            <td style="text-align: right; vertical-align: middle; display: none">
+                <label for="rfqFeedback">
+                    Guid:</label>
+            </td>
+            <td style="text-align: center; vertical-align: bottom; display: none">
+                @Html.TextBoxFor(model => model.Guid, new { @id = "rfqTransGuid" })               
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: right; vertical-align: middle">
+                <label for="rfqFeedback">
+                    Feedback:</label>
+            </td>
+            <td style="text-align: center; vertical-align: bottom">
+                @Html.TextAreaFor(model => model.Feedback, new { @id = "feedback", @class = "rfqFeedback", @cols = 25, @rows = 8, @placeholder = "Minimum of 3 characters and maximum lenght of 255 characters.", @maxlength = "255" })
+                @Html.ValidationMessageFor(m => m.Feedback)   
+                <div id="textareaFeedback" style="font-family: 'Times New Roman', Times, serif; font-size: medium;
+                    color: #000000; text-align: left; margin-left: 25px">
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var text_max = 255;
+        $('#textareaFeedback').html(text_max + ' characters remaining');
+
+        $('#feedback').keyup(function () {
+            var text_length = $('#feedback').val().length;
+            var text_remaining = text_max - text_length;
+
+            $('#textareaFeedback').html(text_remaining + ' characters remaining');
+        });       
+    });
+   
+</script>

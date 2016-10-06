@@ -1,0 +1,308 @@
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\obj\Debug\RfQWebApp.pdb
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\obj\Debug\RfQWebApp.csprojResolveAssemblyReference.cache
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\RfQWebApp.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\RfQWebApp.pdb
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\Antlr3.Runtime.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\DotNetOpenAuth.Core.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\EntityFramework.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\Kendo.Mvc.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\Newtonsoft.Json.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\System.Net.Http.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\System.Net.Http.Formatting.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\System.Net.Http.WebRequest.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\System.Web.Helpers.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\System.Web.Http.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\System.Web.Http.WebHost.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\System.Web.Mvc.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\System.Web.Optimization.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\System.Web.Razor.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\System.Web.WebPages.Deployment.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\System.Web.WebPages.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\System.Web.WebPages.Razor.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\WebGrease.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\WebMatrix.Data.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\WebMatrix.WebData.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\DotNetOpenAuth.Core.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\EntityFramework.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\Kendo.Mvc.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\Newtonsoft.Json.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\System.Net.Http.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\System.Net.Http.Formatting.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\System.Net.Http.WebRequest.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\System.Web.Helpers.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\System.Web.Http.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\System.Web.Http.WebHost.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\System.Web.Mvc.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\System.Web.Razor.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\System.Web.WebPages.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\System.Web.WebPages.Deployment.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\System.Web.WebPages.Razor.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\WebMatrix.Data.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\WebMatrix.WebData.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\bg-BG\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\cs-CZ\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\da-DK\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\de-DE\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\es-ES\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\fr-CA\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\fr-FR\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\it-IT\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\nl-NL\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\pl-PL\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\pt-BR\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\pt-PT\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\ro-RO\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\ru-RU\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\sv-SE\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\tr-TR\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\uk-UA\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\zh-CN\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\obj\Debug\RfQWebApp.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\obj\Debug\Interop.BabelServiceLib.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\obj\Debug\RfQWebApp.csproj.ResolveComReference.cache
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\AMPICommons.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebApp\bin\AMPICommons.pdb
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\obj\Debug\RfQWebApp.pdb
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\obj\Debug\Interop.BabelServiceLib.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\obj\Debug\RfQWebApp.csproj.ResolveComReference.cache
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\AMPICommons.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\Antlr3.Runtime.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\DotNetOpenAuth.Core.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\EntityFramework.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\Kendo.Mvc.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\Newtonsoft.Json.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\System.Net.Http.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\System.Net.Http.Formatting.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\System.Net.Http.WebRequest.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\System.Web.Helpers.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\System.Web.Http.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\System.Web.Http.WebHost.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\System.Web.Mvc.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\System.Web.Optimization.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\System.Web.Razor.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\System.Web.WebPages.Deployment.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\System.Web.WebPages.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\System.Web.WebPages.Razor.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\WebGrease.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\WebMatrix.Data.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\WebMatrix.WebData.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\AMPICommons.pdb
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\DotNetOpenAuth.Core.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\EntityFramework.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\Kendo.Mvc.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\Newtonsoft.Json.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\System.Net.Http.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\System.Net.Http.Formatting.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\System.Net.Http.WebRequest.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\System.Web.Helpers.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\System.Web.Http.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\System.Web.Http.WebHost.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\System.Web.Mvc.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\System.Web.Razor.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\System.Web.WebPages.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\System.Web.WebPages.Deployment.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\System.Web.WebPages.Razor.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\WebMatrix.Data.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\WebMatrix.WebData.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\bg-BG\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\cs-CZ\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\da-DK\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\de-DE\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\es-ES\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\fr-CA\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\fr-FR\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\it-IT\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\nl-NL\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\pl-PL\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\pt-BR\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\pt-PT\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\ro-RO\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\ru-RU\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\sv-SE\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\tr-TR\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\uk-UA\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\zh-CN\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\obj\Debug\RfQWebApp.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\RfQWebApp.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\bin\RfQWebApp.pdb
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebApp\obj\Debug\RfQWebApp.csprojResolveAssemblyReference.cache
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\obj\Debug\RfQWebApp.csprojResolveAssemblyReference.cache
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\obj\Debug\Interop.BabelServiceLib.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\obj\Debug\RfQWebApp.csproj.ResolveComReference.cache
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\obj\Debug\RfQWebApp.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\RfQWebApp.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\RfQWebApp.pdb
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\AMPICommons.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\Antlr3.Runtime.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\DotNetOpenAuth.Core.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\EntityFramework.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\Kendo.Mvc.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\Newtonsoft.Json.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\System.Net.Http.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\System.Net.Http.Formatting.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\System.Net.Http.WebRequest.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\System.Web.Helpers.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\System.Web.Http.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\System.Web.Http.WebHost.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\System.Web.Mvc.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\System.Web.Optimization.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\System.Web.Razor.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\System.Web.WebPages.Deployment.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\System.Web.WebPages.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\System.Web.WebPages.Razor.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\WebGrease.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\WebMatrix.Data.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\WebMatrix.WebData.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\AMPICommons.pdb
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\DotNetOpenAuth.Core.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\EntityFramework.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\Kendo.Mvc.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\Newtonsoft.Json.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\System.Net.Http.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\System.Net.Http.Formatting.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\System.Net.Http.WebRequest.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\System.Web.Helpers.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\System.Web.Http.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\System.Web.Http.WebHost.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\System.Web.Mvc.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\System.Web.Razor.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\System.Web.WebPages.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\System.Web.WebPages.Deployment.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\System.Web.WebPages.Razor.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\WebMatrix.Data.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\WebMatrix.WebData.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\bg-BG\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\cs-CZ\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\da-DK\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\de-DE\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\es-ES\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\fr-CA\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\fr-FR\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\it-IT\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\nl-NL\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\pl-PL\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\pt-BR\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\pt-PT\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\ro-RO\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\ru-RU\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\sv-SE\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\tr-TR\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\uk-UA\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\bin\zh-CN\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebApp\obj\Debug\RfQWebApp.pdb
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\RfQWebApp.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\RfQWebApp.pdb
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\AMPICommons.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\Antlr3.Runtime.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\DotNetOpenAuth.Core.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\EntityFramework.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\Kendo.Mvc.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\Newtonsoft.Json.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\System.Net.Http.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\System.Net.Http.Formatting.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\System.Net.Http.WebRequest.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\System.Web.Helpers.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\System.Web.Http.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\System.Web.Http.WebHost.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\System.Web.Mvc.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\System.Web.Optimization.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\System.Web.Razor.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\System.Web.WebPages.Deployment.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\System.Web.WebPages.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\System.Web.WebPages.Razor.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\WebGrease.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\WebMatrix.Data.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\WebMatrix.WebData.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\AMPICommons.pdb
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\DotNetOpenAuth.Core.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\EntityFramework.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\Kendo.Mvc.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\Newtonsoft.Json.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\System.Net.Http.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\System.Net.Http.Formatting.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\System.Net.Http.WebRequest.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\System.Web.Helpers.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\System.Web.Http.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\System.Web.Http.WebHost.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\System.Web.Mvc.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\System.Web.Razor.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\System.Web.WebPages.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\System.Web.WebPages.Deployment.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\System.Web.WebPages.Razor.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\WebMatrix.Data.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\WebMatrix.WebData.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\bg-BG\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\cs-CZ\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\da-DK\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\de-DE\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\es-ES\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\fr-CA\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\fr-FR\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\it-IT\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\nl-NL\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\pl-PL\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\pt-BR\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\pt-PT\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\ro-RO\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\ru-RU\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\sv-SE\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\tr-TR\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\uk-UA\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\bin\zh-CN\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\obj\Debug\RfQWebApp.csprojResolveAssemblyReference.cache
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\obj\Debug\Interop.BabelServiceLib.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\obj\Debug\RfQWebApp.csproj.ResolveComReference.cache
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\obj\Debug\RfQWebApp.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebApp\obj\Debug\RfQWebApp.pdb

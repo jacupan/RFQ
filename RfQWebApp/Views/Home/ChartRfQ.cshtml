@@ -1,0 +1,143 @@
+﻿@{
+    ViewBag.Title = "Reports - RFQ";
+}
+<link href="@Url.Content("~/Content/font-awesome.min.css")" rel="stylesheet" type="text/css" />
+<style type="text/css">
+    .k-grid .k-grid-header .k-header .k-link
+    {
+        height: auto;
+    }
+    
+    .k-grid .k-grid-header .k-header
+    {
+        white-space: normal;
+        vertical-align: middle;
+    }
+    
+    @*.k-grid td
+    {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }*@
+
+    .k-grid td
+    {
+        white-space: normal;
+        word-wrap: break-word;
+    }
+
+    .k-grid tr td {
+        border-bottom: 1px solid #7bd2f6;
+    }
+
+    
+    .k-edit-form-container
+    {
+        width: 100%;
+    }
+    
+    .vertical-alignment-helper
+    {
+        display: table;
+        height: 100%;
+        width: 100%;
+    }
+    .vertical-align-center
+    {
+        /* To center vertically */
+        display: table-cell;
+        vertical-align: middle;
+    }
+    
+    .modal-content
+    {
+        /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+        width: inherit;
+        height: inherit; /* To center horizontally */
+        margin: 0 auto;
+    }
+    
+    .k-window div.k-window-content
+    {
+        overflow: hidden;
+    }
+
+    .table th, .table td { 
+         border-top: none !important; 
+    }
+
+    #gridRfqTransactionDetails tr.k-alt {
+        background: transparent ;
+    } 
+</style>
+<input type="hidden" value='@ViewData["userDepartment"]' id="dept" />
+<div class="container-fluid">
+    <div style="margin-top: -10px">
+        <div class="container-fluid">
+            <div class="col-md-8 col-md-offset-2">
+                <h1 style="font-family: Franklin Gothic Book; text-align: center; font-weight: bold;">
+                    RFQ Summary Report</h1>
+            </div>
+        </div>
+        
+         <div style="margin-top: 100px">
+            <div class="container-fluid">
+                @(Html.Kendo().Chart<RFQWebApp.Models.RfqCountChart>()
+                    .Name("chart")
+                    .Title("RFQ Counts (Rolling)")
+                    .DataSource(dataSource => dataSource
+                        .Read(read => read.Action("RfqTransactionsChartSum_Read", "Grid"))
+                        .Group(group => group.Add(model => model.Status))
+                        .Sort(sort => sort.Add(model => model.DateCreated).Descending())
+                        //.Sort(sort => sort.Add(model => model.DateMonthCreated).Descending())
+                    )
+                    .Series(series =>
+                    {
+                        series.Column(model => model.RfqCount)
+                            .Name("#= group.value #");
+                    })
+                    .Legend(legend => legend
+                        .Position(ChartLegendPosition.Top)
+                    )
+                    .ValueAxis(axis => axis.Numeric()
+                        .Labels(labels => labels
+                            .Format("{0:N0}")
+                            .Skip(2)
+                            .Step(2)
+                        )
+                    )
+                    .CategoryAxis(axis => axis
+                        .Categories(model => model.DateCreated)
+                        //.Categories(model => model.DateMonthCreated)
+                    .Labels(labels =>
+                        {
+                            //        labels.Format("MMMM yyyy");
+                            labels.Rotation(-90);
+                        })
+
+                    )
+                    .Tooltip(tooltip => tooltip
+                        .Visible(true)
+                        .Format("{0:N0}")
+                    )
+                )
+            </div>
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        var dept = $("#dept").val();     
+
+        if (dept != "Purchasing (550)" && dept != "Information System (582)") {
+            window.location.href = '/Home/AccessDenied/';
+        }
+
+    });
+
+
+  
+</script>

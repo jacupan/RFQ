@@ -1,0 +1,95 @@
+﻿@model RFQWebApp.Models.BuyersLookup
+@Html.HiddenFor(model => model.Guid)
+@Html.ValidationSummary(true)
+<style type="text/css">
+    .category
+    {
+        border-color: #7bd2f6;
+        width: 270px;
+    }
+    .buyersDropDownEditor
+    {
+        border-color: #7bd2f6;
+         width: 270px;
+    }
+  
+    .remarks
+    {
+        border-color: #7bd2f6;
+        width: 270px;
+    }   
+    .comments
+    {
+        border-color: #7bd2f6;
+        width: 270px;
+    }
+    .table th, .table td { 
+         border-top: none !important; 
+    }  
+</style>
+<div class="container-fluid">
+    <table class="table">
+        <tr>
+            <td style="text-align: right; vertical-align: middle">
+                <label for="category">
+                    Category:</label>
+            </td>
+            <td style="text-align: center; vertical-align: bottom">
+                @Html.Kendo().TextBoxFor(model => model.Category).HtmlAttributes(new { @class = "category", @maxlength = "50" })
+                @Html.ValidationMessageFor(m => m.Category)               
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: right; vertical-align: middle">
+                <label for="assignedBuyer">
+                    Buyer:</label>
+            </td>
+            <td style="text-align: center; vertical-align: bottom">
+                @*@Html.Kendo().TextBoxFor(model => model.AssignedBuyer).HtmlAttributes(new { @class = "assignedBuyer", @maxlength = "50" })
+                @Html.ValidationMessageFor(m => m.AssignedBuyer)    *@
+                
+                @Html.DropDownListFor(model => model.AssignedBuyer,
+                                      new SelectList((System.Collections.IEnumerable)ViewData["buyers"], "Value", "Text"),
+                                      "- Select Answer -",
+                                      new { @class = "buyersDropDownEditor", @data_role = "dropdownlist", @data_bind = "value:AssignedBuyer", @style = "text-transform: uppercase" })
+                @Html.ValidationMessageFor(model => model.AssignedBuyer)           
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: right; vertical-align: middle">
+                <label for="remarks">
+                    Remarks:</label>
+            </td>
+            <td style="text-align: center; vertical-align: bottom">
+                @Html.Kendo().TextBoxFor(model => model.Remarks).HtmlAttributes(new { @class = "remarks", @maxlength = "50" })
+                @Html.ValidationMessageFor(m => m.Remarks)               
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: right; vertical-align: middle">
+                <label for="comments">
+                    Comments:</label>
+            </td>
+            <td style="text-align: right; vertical-align: bottom">
+                @Html.TextAreaFor(model => model.Comments, new { @id = "commentsBuyersLookup", @class = "comments", @cols = 25, @rows = 5, @maxlength = "255" })
+                @Html.ValidationMessageFor(m => m.Comments)
+                <div id="textAreaComments" style="font-family: 'Times New Roman', Times, serif;
+                    font-size: medium; color: #000000; text-align: left; ">
+                </div>
+            </td>
+        </tr>        
+    </table>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var text_max = 255;
+
+        $('#commentsBuyersLookup').keyup(function () {
+            var text_length = $('#commentsBuyersLookup').val().length;
+            var text_remaining = text_max - text_length;
+
+            $('#textAreaComments').html(text_remaining + ' characters remaining');
+        });
+    });   
+   
+</script>

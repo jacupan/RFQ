@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title - RFQ</title>
+    <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/x-icon" href="@Url.Content("~/Content/favicon.ico")" />
+    <style>
+        .k-header h1 {
+            margin: 0;
+            padding: 30px 15px;
+            font-size: 32px;
+            font-weight: lighter;
+        }
+
+        /* Sticky footer styles
+    -------------------------------------------------- */
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+
+        body {
+            /* Margin bottom by footer height */
+            margin-bottom: 30px;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;            
+            /* Set the fixed height of the footer here */
+            height: 60px;
+            background-color: #f5f5f5;
+        }
+
+        .container-fluid .text-muted {
+            margin: 20px 0;
+        }
+
+        .placeholders {
+            margin: 30px auto;
+        }
+
+        .placeholder img {
+            display: inline-block;
+        }
+
+        p .k-button {
+            margin: 0 15px 0 0;
+        }
+        .btn-toggle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-shadow: none;
+            height: 48px;
+        }
+
+        .btn-toggle .k-icon {
+            opacity: 1;
+        }
+
+        .btn-toggle,
+        .k-primary.btn-toggle:hover,
+        .btn-toggle:focus:active:not(.k-state-disabled):not([disabled]),
+        .btn-toggle:focus:not(.k-state-disabled):not([disabled]) {
+            box-shadow: none;
+            border-radius: 0;
+        }
+
+        .btn-toggle .k-i-hbars,
+        .k-primary.btn-toggle:hover .k-i-hbars,
+        .btn-toggle:focus:active:not(.k-state-disabled):not([disabled]) .k-i-hbars,
+        .btn-toggle:focus:not(.k-state-disabled):not([disabled]) .k-i-hbars {
+            background-position: -80px -32px;
+        }
+        @@media (max-width: 768px) {
+          .k-item {
+            display: block;
+            clear: both;
+            float: none;
+            width: 100%;
+          }
+
+          .k-header h1 {
+            margin: 0;
+            padding: 16px 15px 14px 60px;
+            font-size: 18px;
+            font-weight: lighter;
+           }  
+        }
+        h1 { 
+           position: absolute; 
+           top: 20px;           
+           right: 0; 
+           width: 100%; 
+        }
+        #rfqHeader {
+            @*max-width: 600px;*@                                
+            margin: 20px auto;
+            padding-top: 75px;
+            background: url('../../content/RFQHeaderImg.jpg') no-repeat left 0;       
+        }   
+        
+        #userid {                     
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+        /* Chrome, Safari, Opera */
+        @@-webkit-keyframes example {
+             0%  {color: red;}
+            25%  {color: yellow;}
+            50%  {color: orange;}
+            75%  {color: blue;}
+            100% {color: green;}
+        }
+
+        /* Standard syntax */
+        @@keyframes example {
+             0%   {color: red;}
+            25%  {color: yellow;}
+            50%  {color: orange;}
+            75%  {color: blue;}
+            100% {color: green;}
+        } 
+    </style>
+    <link href="@Url.Content("~/Content/kendo/2016.1.226/kendo.common.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/kendo/2016.1.226/kendo.mobile.all.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/kendo/2016.1.226/kendo.dataviz.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/kendo/2016.1.226/kendo.blueopal.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/kendo/2016.1.226/kendo.dataviz.blueopal.min.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/kendo/2016.1.226/jquery.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/kendo/2016.1.226/jszip.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/kendo/2016.1.226/kendo.all.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/kendo/2016.1.226/kendo.aspnetmvc.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/kendo.modernizr.custom.js")"></script>
+</head>
+<body>
+    <div class="container-fluid" style="overflow: auto;">
+        <div id="rfqHeader" class="row k-header" style="display: block">
+            <h1>
+                @*<i class="fa fa-home fa-fw"></i>&nbsp;*@
+                @Html.ActionLink("Request For Quotation (RFQ)", "Index", "Home", null, new { @style = "color: transparent ; text-decoration: none; font-family: 'Franklin Gothic Book'; display: block" })   <span id="LabelLogInUser" style="float: right; font-family: 'Franklin Gothic Book'; margin-top: -40px"><i class="fa fa-user"></i>&nbsp;Hi<span id="userid"> @RfQWebApp.Classes.Common.GetWebCurrentUser(RfQWebApp.Classes.Common.WebUserInformation.Username)</span>!
+                &nbsp;</span>
+            </h1>
+         
+        </div>
+    </div>
+    @* //#003f59*@
+    <div class="container-fluid">
+        @(Html.Kendo().Menu()
+          .Name("Menu")
+          .Items(items =>
+          {
+              items.Add()
+                  .Text("RFQ")
+                  .SpriteCssClasses("fa fa-ticket text-success fa-fw")
+                  .Items(rfq =>
+                  {
+                      rfq.Add().Text("Create new RFQ")
+                              .SpriteCssClasses("fa fa-plus-square-o text-primary fa-fw")
+                              .Action("SubmitRFQ", "Home")
+                              ;
+
+                      rfq.Add().Text("Update Draft RFQ")
+                              .SpriteCssClasses("fa fa-pencil-square-o text-success fa-fw")
+                              .Action("UpdateRFQ", "Home")
+                              ;
+
+                      rfq.Add().Text("View & Update RFQ Status")
+                              .SpriteCssClasses("fa fa-eye text-info fa-fw")
+                              .Action("ViewAckCanRejRfQ", "Home")
+                              ;
+                  });
+
+              items.Add().Text("Buyers")
+                   .SpriteCssClasses("fa fa-unlock-alt text-info fa-fw")
+                   .Items(buyer =>
+                   {
+                       buyer.Add().Text("Acknowledge / Canvass / Update RFQ")
+                            .SpriteCssClasses("fa fa-hourglass-start text-primary fa-fw")
+                            .Action("UpdateRfQStatus", "Home");
+                       
+                       buyer.Add().Text("Maintenance Tool")
+                            .SpriteCssClasses("fa fa-wrench text-primary fa-fw")
+                            .Action("MaintenanceTool", "Home");
+
+                   });
+
+              items.Add().Text("Reports")
+                   .SpriteCssClasses("fa fa-file-text-o text-warning fa-fw")
+                   .Items(reports =>
+                   {
+                       reports.Add().Text("RFQ Chart")
+                             .SpriteCssClasses("fa fa-bar-chart text-success text-info fa-fw")
+                             .Action("ChartRfQ", "Home");
+                       reports.Add().Text("For Buyers")
+                              .SpriteCssClasses("fa fa-file-excel-o text-success text-info fa-fw")
+                              .Action("ReportsRfQ", "Home");
+                       reports.Add().Text("For Users")
+                              .SpriteCssClasses("fa fa-file-excel-o text-success text-info fa-fw")
+                              .Action("ReportsRfQByOwner", "Home");
+                   });
+
+              //items.Add().Text("Hi " + @RfQWebApp.Classes.Common.GetWebCurrentUser(RfQWebApp.Classes.Common.WebUserInformation.Username) + " !")
+              //    .HtmlAttributes(new { style = "float: right" })
+              //    .SpriteCssClasses("fa fa-user");
+          })
+        )
+        @*<div class="row">
+            <div class="col-xs-18 col-md-12">
+                <div id="grid">
+                </div>
+            </div>
+        </div>*@
+    </div>
+    @RenderBody()
+    <footer class="footer">
+        <div class="container-fluid">
+            <p class="text-muted">Copyright © 2002-2015 Telerik. All rights reserved.</p>            
+        </div>
+    </footer>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#responsive-panel").kendoResponsivePanel({
+                breakpoint: 768,
+                autoClose: false,
+                orientation: "top"
+            });
+        });
+        function onclick(e) {
+            $("#responsive-panel").getKendoResponsivePanel().toggle();
+        }
+    </script>
+</body>
+@*<span style="float: right">No of times site visited:&nbsp; @ApplicationInstance.Application["Totaluser"] </span>*@
+@*&nbsp; No of users online:&nbsp; @ApplicationInstance.Application["OnlineUserCounter"]*@
+</html>

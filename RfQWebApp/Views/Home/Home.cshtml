@@ -1,0 +1,76 @@
+﻿<link href="@Url.Content("~/Content/font-awesome.css")" rel="stylesheet" type="text/css" />
+<div id="rfqHeader" class="row k-header">
+    <h1>
+        @*<i class="fa fa-home fa-fw"></i>&nbsp;*@
+        @Html.ActionLink("Request For Quotation (RFQ)", "Index", "Home", null, new { @style = "color: #003f59; text-decoration: none; display: none; font-family: 'Franklin Gothic Book'" })
+        <span id="LabelLogInUser" style="float: right; font-family: 'Franklin Gothic Book'; ">
+            <i class="fa fa-user"></i>&nbsp;Hi @RfQWebApp.Classes.Common.GetWebCurrentUser(RfQWebApp.Classes.Common.WebUserInformation.Username)!
+            &nbsp;</span></h1>
+    @(Html.Kendo().Menu()
+          .Name("Menu")
+          .Items(items =>
+          {
+              items.Add()
+                  .Text("RFQ")
+                  .SpriteCssClasses("fa fa-ticket text-success fa-fw")
+                  .Items(rfq =>
+                   {
+                       rfq.Add().Text("Create new RFQ")
+                               .SpriteCssClasses("fa fa-plus-square-o text-primary fa-fw")
+                               .Action("SubmitRFQ", "Home")
+                               ;
+
+                       rfq.Add().Text("Update Draft RFQ")
+                               .SpriteCssClasses("fa fa-pencil-square-o text-success fa-fw")
+                               .Action("UpdateRFQ", "Home")
+                               ;
+
+                       rfq.Add().Text("View & Update RFQ Status")
+                               .SpriteCssClasses("fa fa-eye text-info fa-fw")
+                               .Action("ViewAckCanRejRfQ", "Home")
+                               ;
+                   });
+
+              items.Add().Text("Buyers")
+                   .SpriteCssClasses("fa fa-unlock-alt text-info fa-fw")
+                   .Items(buyer =>
+                   {
+                       buyer.Add().Text("Acknowledge / Canvass / Update RFQ")
+                            .SpriteCssClasses("fa fa-hourglass-start text-primary fa-fw")
+                            .Action("UpdateRfQStatus", "Home");
+
+                   });
+              
+              items.Add().Text("Reports")
+                   .SpriteCssClasses("fa fa-file-text-o text-warning fa-fw")
+                   .Items(reports =>
+                   {
+
+                       reports.Add().Text("For Users")
+                              .SpriteCssClasses("fa fa-file-excel-o text-success text-info fa-fw")
+                              .Action("ReportsRfQ", "Home");
+                       reports.Add().Text("For Buyers")
+                              .SpriteCssClasses("fa fa-file-excel-o text-success text-info fa-fw")
+                              .Action("ReportsRfQByOwner", "Home");
+                   });
+
+          })
+    )
+</div>
+
+
+<style type="text/css">
+    h1 { 
+       position: absolute; 
+       @*top: 50px; *@
+       margin: 30px auto;
+       right: 0; 
+       width: 100%; 
+    }
+    #rfqHeader {
+        @*max-width: 600px;*@        
+        margin: 20px auto;
+        padding-top: 120px;
+        background: url('../../content/RFQHeader.jpg') no-repeat left 0;       
+    }    
+</style>

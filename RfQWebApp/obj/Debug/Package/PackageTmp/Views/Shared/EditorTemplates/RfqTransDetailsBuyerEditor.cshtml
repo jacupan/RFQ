@@ -1,0 +1,122 @@
+﻿@model RFQWebApp.Models.RfqTransactionDetails
+@*@Html.HiddenFor(model => model.Guid)*@
+@Html.HiddenFor(model => model.RfqNumber)
+@Html.HiddenFor(model => model.DateCreated)
+@Html.HiddenFor(model => model.DateModified)
+@Html.HiddenFor(model => model.DateCanvassed)
+@Html.HiddenFor(model => model.DateRejected)
+@Html.HiddenFor(model => model.DateAcknowledged)
+@Html.HiddenFor(model => model.CreatedBy)
+@Html.HiddenFor(model => model.ModifiedBy)
+@Html.HiddenFor(model => model.AcknowledgedBy)
+@Html.HiddenFor(model => model.ItemName)
+@Html.HiddenFor(model => model.ItemDescription)
+@Html.HiddenFor(model => model.DrawingSpecification)
+@Html.HiddenFor(model => model.SupplierItemPN)
+@Html.HiddenFor(model => model.ItemNoOracleNo)
+@Html.HiddenFor(model => model.MachineModel)
+@Html.HiddenFor(model => model.SerialNo)
+@Html.HiddenFor(model => model.Quantity)
+@Html.HiddenFor(model => model.UoM)
+@Html.HiddenFor(model => model.IsRepeatOrderCode)
+@Html.HiddenFor(model => model.ReferencePrPo)
+@Html.HiddenFor(model => model.Remarks)
+@Html.ValidationSummary(true)
+<style type="text/css">
+    .itemStatusDropDownEditor
+    {
+        border-color: #7bd2f6;
+        width: 200px;
+    }
+    .supplierName
+    {
+        border-color: #7bd2f6;
+        width: 200px;
+    }
+    .comments
+    {
+        border-color: #7bd2f6;
+    }
+    .table th, .table td { 
+         border-top: none !important; 
+    }
+</style>
+<div class="container-fluid">
+    <table class="table">
+        <tr>
+            <td style="text-align: right; vertical-align: middle; display: none">
+                <label for="rfqFeedback">
+                    Guid:</label>
+            </td>
+            <td style="text-align: center; vertical-align: bottom; display: none">
+                @Html.TextBoxFor(model => model.Guid, new { @id = "rfqTransGuid" })               
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: right; vertical-align: bottom">
+                <label for="itemStatusDropDownEditor">
+                    Item Status:</label>
+            </td>
+            <td style="text-align: center; vertical-align: bottom">
+                @Html.DropDownListFor(model => model.ItemStatusCode,
+                                 new SelectList((System.Collections.IEnumerable)ViewData["itemStatus"], "Value", "Text"),
+                                 "- Select Answer -",
+                                          new { @id = "rfqItemStatus", @class = "itemStatusDropDownEditor", @data_role = "dropdownlist", @data_bind = "value:ItemStatusCode", @required = "required", @validationmessage = "Select answer" })
+                @Html.ValidationMessageFor(model => model.ItemStatusCode)
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: right; vertical-align: bottom">
+                <label for="supplierName">
+                    Supplier Name:</label>
+            </td>
+            <td style="text-align: center; vertical-align: bottom">
+                @Html.Kendo().TextBoxFor(model => model.SupplierName).HtmlAttributes(new { @id = "rfqSupplierName", @class = "supplierName", @required = "required", @maxlength = "255", @validationmessage = "Supplier Name is Required" })
+                @Html.ValidationMessageFor(m => m.SupplierName)
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: right; vertical-align: middle">
+                <label for="comments">
+                    Comments:</label>
+            </td>
+            <td style="text-align: center; vertical-align: bottom">
+                @Html.TextAreaFor(model => model.Comments, new { @id = "rfqComments", @class = "comments", @cols = 25, @rows = 5, @maxlength = "255" })
+                @Html.ValidationMessageFor(m => m.Comments)
+                <div id="textareaComments" style="font-family: 'Times New Roman', Times, serif;
+                    font-size: medium; color: #000000; text-align: left; margin-left: 40px">
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var text_max = 255;
+        $('#textareaComments').html(text_max + ' characters remaining');
+
+        $('#rfqComments').keyup(function () {
+            var text_length = $('#rfqComments').val().length;
+            var text_remaining = text_max - text_length;
+
+            $('#textareaComments').html(text_remaining + ' characters remaining');
+        });       
+    });   
+</script>
+@*<script type="text/javascript">
+   
+
+    $(document).ready(function () {
+
+
+        var transGuid = $("#txtGUID").val();
+
+
+//        alert(transGuid);
+
+        $("#txtTransGuid").val(transGuid);
+    });
+
+   
+
+</script>*@

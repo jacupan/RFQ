@@ -1,0 +1,1502 @@
+﻿@{
+    ViewBag.Title = "Update RFQ Status";
+}
+<link href="@Url.Content("~/Content/font-awesome.min.css")" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../../Content/jBox.css" />
+<script type="text/javascript" src="../../Scripts/jBox.min.js"></script>
+<style type="text/css">
+    .k-grid .k-grid-header .k-header .k-link
+    {
+        height: auto;
+    }
+    
+    .k-grid .k-grid-header .k-header
+    {
+        white-space: normal;
+        vertical-align: middle;
+    }
+    
+    @*.k-grid td
+    {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }*@
+
+    .k-grid td
+    {
+        white-space: normal;
+        word-wrap: break-word;
+    }
+
+    .k-grid tr td {
+        border-bottom: 1px solid #7bd2f6;
+    }
+    
+    .k-edit-form-container
+    {
+        width: 100%;
+    }
+    
+    .vertical-alignment-helper
+    {
+        display: table;
+        height: 100%;
+        width: 100%;
+    }
+    .vertical-align-center
+    {
+        /* To center vertically */
+        display: table-cell;
+        vertical-align: middle;
+    }
+    
+    .modal-content
+    {
+        /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+        width: inherit;
+        height: inherit; /* To center horizontally */
+        margin: 0 auto;       
+    }
+    
+    .k-window div.k-window-content
+    {
+        overflow: hidden;
+    }
+
+    .table th, .table td { 
+         border-top: none !important; 
+    }
+
+    #gridRfqTransactionDetails tr.k-alt {
+        background: transparent ;
+    } 
+</style>
+<input type="hidden" id="hidStatus" />
+<input type="hidden" value='@RfQWebApp.Classes.Common.GetWebCurrentUser(RfQWebApp.Classes.Common.WebUserInformation.Username)' id="user" />
+<input type="hidden" value='@ViewData["userDepartment"]' id="dept" />
+<input type="hidden" name="fileGuid" id="fileGuid" />
+<div id="jboxContent" style="display: none; z-index: 10000">
+    @using (Html.BeginForm("UploadFile", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {  
+        <label for="file" style="font-family: 'Franklin Gothic Book'; font-weight: bold">
+            Upload File</label> 
+        <br />
+                                  
+        <hr style="border-color: #d7d7d7" />
+        <input type="hidden" name="transRfqNumber" id="transRfqNumber" />
+        <input type="hidden" name="transDetailsGuid" id="transDetailsGuid" />
+        <input type="file" name="file" id="file" onchange="checkFile(this)" style="width: 100%;" /> 
+        <br />
+                                  
+        <hr style="border-color: #d7d7d7" />            
+        
+        <div class="btn-group">
+            <button type="submit" class="btn btn-success btn-sm" id="btnFileUpload">
+                <i class="fa fa-upload"></i>Upload
+            </button>
+            <button id="btnNo" type="button" class="btn btn-warning btn-sm">
+                <i class="fa fa-ban"></i>Cancel
+            </button>
+        </div>                                         
+    }
+</div>
+<div id="modalWindow">
+    <br />
+    <p>
+        Are you sure you want to delete this record?</p>
+    <hr />
+    <div class="btn-group" style="margin-left: 100px">
+        <button id="yes" class="k-button">
+            Yes</button>
+        <button id="no" class="k-button">
+            No</button>
+    </div>
+</div>
+<div class="modal fade bs-example-modal-sm" id="modalNotification" tabindex="-1"
+    role="dialog" data-backdrop="static">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog modal-sm vertical-align-center">
+            <div class="modal-content" style="z-index: 1000">
+                <div class="modal-header">
+                    <i class="fa fa-exclamation-circle text-danger fa-2x">&nbsp; Error</i>
+                </div>
+                <div class="modal-body">
+                    <p id="pmodalNotification" style="text-align: center">
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade bs-example-modal-sm" id="modalNotificationSuccess" tabindex="-1"
+    role="dialog" data-backdrop="static">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog modal-sm vertical-align-center">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <i class="fa fa-check-circle-o text-success fa-2x">&nbsp; Success</i>
+                </div>
+                <div class="modal-body">
+                    <p id="pmodalNotificationSuccess" style="text-align: center">
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnSuccess" type="button" class="btn btn-default" data-dismiss="modal">
+                        Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" id="winViewFile" style="display: none;">
+    <img src="" alt="N/A" id="viewImg" style="width: 370px; height: 320px; left: 0px;
+        right: 0px; margin-left: auto; margin-right: auto" />
+</div>
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="winFilesDrawSpec"
+    aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog modal-lg vertical-align-center">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;</button>
+                    <h4 class="modal-title" id="myModalLabel" style="color: #003f59; font-weight: bold;
+                        font-family: Arial">
+                        <i class="fa fa-list">&nbsp; View Attachments</i></h4>
+                </div>
+                <div class="modal-body">
+                    @(Html.Kendo().Grid<RFQWebApp.Models.RfqUserAttachments>()
+                            .Name("gridDrawSpec")
+                            .AutoBind(false)
+                            .Selectable(selectable => selectable
+                                .Type(GridSelectionType.Row))
+                            .HtmlAttributes(new { style = "height: 100%" })
+                            .Columns(cols =>
+                            {
+                                cols.Bound(f => f.FileID).Visible(false);
+                                cols.Bound(f => f.TransDetailsGuid).Visible(false);
+                                cols.Bound(f => f.RfqNumber).Visible(false);
+                                //cols.Bound(f => f.FileBytes).Visible(false);
+                                cols.Bound(f => f.FileExtension).Visible(false);
+                                cols.Bound(f => f.FileIsDeleted).Visible(false);
+                                cols.Bound(f => f.FileName)
+                                    .HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                    .HtmlAttributes(new { style = "text-align: center" })
+                                    ;
+                                cols.Command(commands =>
+                                {
+                                    commands.Custom(" Download").HtmlAttributes(new { id = "btnDownload", style = "width: 150px; text-align: left; padding-left: 25px " });
+                                    //commands.Destroy().HtmlAttributes(new { id = "btnDel", style = "width: 150px; text-align: left; padding-left: 25px" }); ;
+
+                                })
+                                    .HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                    .HtmlAttributes(new { style = "text-align: center" })
+                                    .Title("Commands")
+                                    //.Width(200)
+                                    ;
+
+                            })
+                            .Scrollable()
+                            .Pageable(pageable => pageable
+                                .Refresh(true)
+                                .PageSizes(true)
+                                .ButtonCount(5))
+                            .Resizable(resizable => resizable.Columns(true))
+                            .DataSource(dataSource => dataSource
+                                .Ajax()
+                                .Model(model => model.Id(a => a.FileID))
+                                .ServerOperation(false)
+                                .Read(read => read.Action("RfqTransDetailsDrawSpecUserView_Read", "Grid").Data("additionalInfo"))
+                                )
+                            .Events(e => e.DataBound("onRowBoundGridDrawSpec"))
+                        )
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+</div>
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="winListOfRFQs"
+    aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog modal-lg vertical-align-center">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;</button>
+                    <h4 class="modal-title" id="myModalLabel" style="color: #003f59; font-weight: bold;
+                        font-family: Arial">
+                        <i class="fa fa-list">&nbsp; My RFQs</i></h4>
+                </div>
+                <div class="modal-body">
+                    @(Html.Kendo().Grid<RFQWebApp.Models.RfqTransactions>()
+                                .Name("gridMyRfQs")
+                                .Excel(exc => exc.AllPages(true))
+                                .ToolBar(toolBar =>
+                                {
+                                    toolBar.Template(
+                                        @<Text>
+                                        <div class="input-group">
+                                            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search" aria-hidden="true">
+                                            </i></span>
+                                            <input id="searRfQNo" type="number" class="form-control" placeholder="search RfQ #"
+                                                aria-describedby="basic-addon1" style="width: 250px; text-align: center; color: #0000FF;
+                                                font-weight: bolder;">
+                                            <button class="k-button k-grid-excel" style = "height: 35px; float: right"><i class="fa fa-file-excel-o" aria-hidden="true"></i>&nbsp; Export to Excel</button>    
+                                        </div>
+                                        </Text>);
+                                })
+                            .AutoBind(true)
+                            .Selectable(selectable => selectable
+                            .Type(GridSelectionType.Row))
+                            .HtmlAttributes(new { style = "height: 100%" })
+                            .Columns(cols =>
+                            {
+
+                                cols.Bound(t => t.RfqNumber)
+                                    .HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                    .HtmlAttributes(new { style = "text-align: center" })
+                                    ;
+                                cols.Bound(t => t.Status)
+                                    .HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                    .HtmlAttributes(new { style = "text-align: center" })
+                                    ;
+                                cols.Bound(t => t.DateCreated)
+                                    .Format("{0:dd/MM/yyyy HH:mm:ss}")
+                                    .HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                    .HtmlAttributes(new { style = "text-align: center" })
+                                    ;
+
+                            })                            
+                            .Scrollable()
+                                .Pageable(pager => pager
+                                .PageSizes(new[] { 20, 40, 60, 80, 100 })                                // Default page sizes are 5, 10 and 20
+                                .Refresh(true).Messages(
+                                    messages => messages.Refresh("Click to refresh"))
+                                )
+                            .Resizable(resizable => resizable.Columns(true))
+                            .DataSource(ds =>
+                            {
+                                ds.Ajax()
+                                    .Model(model =>
+                                        {
+                                            model.Id(a => a.Guid);
+                                            model.Field("RfqNumber", typeof(System.String));
+                                        })
+                                    .ServerOperation(false)
+                                    .Events(events => events.Error("onGridErrorRfqList"))
+                                    //.Read(read => read.Action("RfqTransactions_Read", "Grid", new { username = "JACUPAN" }));
+                                .Read(read => read.Action("RfqTransactionsBuyerView_Read", "Grid"));
+
+                            })
+                            .Events(e =>
+                            {
+                                e.Change("onChange");
+                                //e.DataBound("onRowBound").Cancel("onCancel");                             
+                            })
+                    )
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+</div>
+<div class="container-fluid" id="winFiles" style="display: none;">
+    @(Html.Kendo().Grid<RFQWebApp.Models.RfqAttachments>()
+        .Name("gridFiles")
+        .AutoBind(false)
+        .Selectable(selectable => selectable
+            .Type(GridSelectionType.Row))
+        .HtmlAttributes(new { style = "height: 100%" })
+        .Columns(cols =>
+        {
+            cols.Bound(f => f.FileID).Visible(false);
+            cols.Bound(f => f.TransDetailsGuid).Visible(false);
+            cols.Bound(f => f.RfqNumber).Visible(false);
+            //cols.Bound(f => f.FileBytes).Visible(false);
+            cols.Bound(f => f.FileExtension).Visible(false);
+            cols.Bound(f => f.FileIsDeleted).Visible(false);
+            cols.Bound(f => f.FileName)
+                .HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                .HtmlAttributes(new { style = "text-align: center" })
+                ;
+            cols.Command(commands =>
+            {
+                //commands.Custom("View").HtmlAttributes(new { id = "viewAttachBtn" });                                                    
+                commands.Custom(" Download").HtmlAttributes(new { id = "downloadAttachBtn", style = "width: 100px" });
+                //commands.Destroy().HtmlAttributes(new { id = "delBtn", style = "width: 150px; text-align: left; padding-left: 25px" }); 
+                commands.Custom(" Delete").Click("openWindowQuote").HtmlAttributes(new { id = "delBtnQuote", style = "width: 100px" });
+
+            })
+                .HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                .HtmlAttributes(new { style = "text-align: center" })
+                .Title("Commands")
+                //.Width(200)
+                ;
+            @*cols.Template(@<text></text>).ClientTemplate("<a href='" + Url.Action("LoadFile", "Home") + "/#=FileID#'>View</a>");*@
+        })
+        .Scrollable()
+        .Pageable(pageable => pageable
+            .Refresh(true)
+            .PageSizes(true)
+            .ButtonCount(5))
+        .Resizable(resizable => resizable.Columns(true))
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .Model(model => model.Id(a => a.FileID))
+            .ServerOperation(false)
+            .Read(read => read.Action("RfqTransDetailsFilesBuyerView_Read", "Grid").Data("additionalInfo"))
+            .Destroy(destroy => destroy.Action("RfqTransDetailsFiles_Destroy", "Grid"))
+            .PageSize(100))
+        .Events(e => e.DataBound("onRowBoundGridFiles"))
+    )
+</div>
+<div class="container-fluid">
+    <div style="margin-top: -10px">
+        <div class="container-fluid">
+            <div class="col-md-8 col-md-offset-2">
+                <h1 style="font-family: Franklin Gothic Book; text-align: center; font-weight: bold;">
+                    Acknowledge Request for Quotation</h1>
+            </div>
+        </div>
+        <div style="margin-top: 100px">
+            <div class="container-fluid">
+                @*<div class="col-md-8 col-md-offset-2">*@
+                    @* <div class="table-responsive">*@
+                    @using (Html.BeginForm("UpdateRfQ", "Home", FormMethod.Post, new { id = "loadForm" }))
+                    {
+                        <div class="container" style="overflow: auto;">
+                        <table class="table">
+                            <tr>
+                                <td style="text-align: right; font-family: 'Franklin Gothic Book'; vertical-align: bottom">
+                                    <label for="rfqNumber">
+                                        RFQ#:</label>
+                                </td>
+                                <td style="text-align: center; vertical-align: bottom;">
+                                    @(Html.Kendo().NumericTextBox()
+                                        .Name("rfqNumber")
+                                        .Decimals(0)
+                                        .Format("#")
+                                        .Spinners(false)
+                                        .HtmlAttributes(new { placeholder = "RFQ #", style = "width:270px; text-align: center; color: #0000FF; font-weight: bolder;" })
+                                     )
+                                </td>
+                                <td style="text-align: right; font-family: 'Franklin Gothic Book'; vertical-align: bottom">
+                                    <label for="rfqRequestor">
+                                        Requestor:</label>
+                                </td>
+                                <td style="text-align: center; vertical-align: bottom">
+                                    @(Html.Kendo().TextBox()
+                                        .Name("rfqRequestor")
+                                        .Enable(false)
+                                        .HtmlAttributes(new { placeholder = "Requestor", style = "width:270px; text-align: center;  text-transform: uppercase; font-size: medium" })
+                                    )
+                                </td>
+                                <td style="text-align: right; font-family: 'Franklin Gothic Book'; vertical-align: bottom">
+                                    <label for="rfqDepartment">
+                                        Department:</label>
+                                </td>
+                                <td style="text-align: center; vertical-align: bottom">
+                                    @(Html.Kendo().TextBox()
+                                        .Name("rfqDepartment")
+                                        .Enable(false)
+                                        .HtmlAttributes(new { placeholder = "Department", style = "width:270px; text-align: center;  text-transform: uppercase; font-size: medium" })
+                                    )
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right; font-family: 'Franklin Gothic Book'; vertical-align: bottom">
+                                    <label for="rfqType">
+                                        Type:</label>
+                                </td>
+                                <td style="text-align: center; vertical-align: bottom">
+                                    @(Html.Kendo().TextBox()
+                                        .Name("rfqType")
+                                        .Enable(false)
+                                        .HtmlAttributes(new { placeholder = "Type", style = "width:270px; text-align: center; text-transform: uppercase; font-size: medium" })
+                                    )
+                                </td>
+                                <td style="text-align: right; font-family: 'Franklin Gothic Book'; vertical-align: bottom">
+                                    <label for="rfqCategory">
+                                        Category:</label>
+                                </td>
+                                <td style="text-align: center; vertical-align: bottom">
+                                    @(Html.Kendo().TextBox()
+                                        .Name("rfqCategory")
+                                        .Enable(false)
+                                        .HtmlAttributes(new { placeholder = "Category", style = "width:270px; text-align: center;  text-transform: uppercase; font-size: medium" })
+                                    )
+                                </td>
+                                <td style="text-align: right; font-family: 'Franklin Gothic Book'; vertical-align: bottom">
+                                    <label for="rfqBuyer">
+                                        Buyer:</label>
+                                </td>
+                                <td style="text-align: center; vertical-align: bottom">
+                                    @(Html.Kendo().TextBox()
+                                        .Name("rfqBuyer")
+                                        .Enable(false)
+                                        .HtmlAttributes(new { placeholder = "Buyer", style = "width:270px; text-align: center;  text-transform: uppercase; font-size: medium" })
+                                    )
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                </td>
+                                <td>
+                                    <button id="btnRetrieve" type="button" class="btn btn-info btn-sm" style="display: none">
+                                        <i class="fa fa-angle-double-down"></i>&nbsp; Retrieve
+                                    </button>
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                                <td style="text-align: right; font-family: 'Franklin Gothic Book'; vertical-align: bottom">
+                                    <label for="rfqBuyer">
+                                        Re-assigned Buyer:</label>
+                                </td>
+                                <td style="text-align: center; vertical-align: bottom;">
+                                    @*<div class="btn-group">*@
+                                       @(Html.Kendo().DropDownList()
+                                          .Name("ddlBuyer")
+                                          .DataTextField("FullName")
+                                          .DataValueField("Username")
+                                          .Events(ev => ev.Select("onSelectBuyer"))
+                                          .Events(ev => ev.Change("onChangeBuyer"))
+                                          .HtmlAttributes(new { style = "width: 270px; text-transform: uppercase; font-size: medium;", title = "Leave blank if you don't want to re-assign the buyer" })
+                                          .DataSource(source =>
+                                          {
+                                              source.Read(read =>
+                                              {
+                                                  read.Action("ReAssignedBuyer", "Home").Data("paramBuyer");
+                                              });
+                                          })
+                                          .OptionLabel(" ")
+                                       )
+                                     @*   <button data-toggle="tooltip" data-placement="top" type="button" title="Leave blank if you don't want to re-assign the buyer" class="btn btn-primary btn-sm">
+                                            <i class="fa fa-question-circle" aria-hidden="true"></i>
+                                        </button>*@
+                                    @*</div>*@
+                                    
+                                    @*<div style="font-family: 'Times New Roman', Times, serif; font-size: medium; color: #C0C0C0;
+                                        text-align: left; margin-left: 15px">
+                                        Leave blank if you don't want to re-assign the buyer
+                                    </div>*@
+                                </td>
+                            </tr>
+                        </table>
+                        </div>
+                    }
+                    @*  </div>*@
+                @*</div>*@
+            </div>
+        </div>
+        <div style="margin-top: 20px">
+            <div class="container-fluid">
+                @(Html.Kendo().Grid<RFQWebApp.Models.RfqTransactionDetails>()
+                    .Name("gridRfqTransactionDetails")
+                    .HtmlAttributes(new { style = "height: 450px;" })
+                    //.ToolBar(excel =>
+                    //    {
+                    //        excel.Excel();
+
+                    //    })
+                    .Excel(exc => exc.AllPages(true))
+                    .ToolBar(toolbar =>
+                    {
+                        toolbar.Custom()
+                            .Name("<span class=\"k-icon k-i-sort-desc\"></span>My RFQs")
+                            .HtmlAttributes(new { id = "listOfRfqs" }) //, @class = "fa fa-2x fa fa-list" })
+                            ;
+                        toolbar.Excel();
+                    })
+                    .Editable(editable => editable.Mode(GridEditMode.PopUp)
+                        .TemplateName("RfqTransDetailsBuyerEditor").Window(window => window.Name("editGridWindow")
+                        .Width(490)
+                        ))
+
+                    .Columns(col =>
+                        {
+                            col.Bound(a => a.Guid)
+                                .Visible(false);
+                            col.Bound(a => a.RfqNumber)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center" })
+                                .HeaderHtmlAttributes(new { style = "text-align: left" })
+                                .HtmlAttributes(new { style = "text-align: left" })
+                                ;
+                            col.Bound(a => a.ItemDescription)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center" })
+                                .HeaderHtmlAttributes(new { style = "text-align: left" })
+                                .HtmlAttributes(new { style = "text-align: left" })
+                                .Title("Item Description")
+                                ;
+                            col.Command(com =>
+                            {
+                                com.Custom(" View Spec").HtmlAttributes(new { id = "btnViewFileUploaded", style = "width: 130px; text-align: center; " });
+                            })
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                .HeaderHtmlAttributes(new { style = "text-align: center" })                                
+                                .HtmlAttributes(new { style = "text-align: center" })
+                                .Title("Drawing Spec")
+                                .Width(150)
+                                ;
+                            col.Bound(a => a.SupplierItemPN)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center" })
+                                .HeaderHtmlAttributes(new { style = "text-align: left" })
+                                .HtmlAttributes(new { style = "text-align: left" })
+                                ;
+                            col.Bound(a => a.ItemNoOracleNo)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center" })
+                                .HeaderHtmlAttributes(new { style = "text-align: left" })
+                                .HtmlAttributes(new { style = "text-align: left" })
+                                ;
+                            col.Bound(a => a.MachineModel)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center" })
+                                .HeaderHtmlAttributes(new { style = "text-align: left" })
+                                .HtmlAttributes(new { style = "text-align: left" })
+                                ;
+                            col.Bound(a => a.SerialNo)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center" })
+                                .HeaderHtmlAttributes(new { style = "text-align: left" })
+                                .HtmlAttributes(new { style = "text-align: left" })
+                                ;
+                            col.Bound(a => a.Quantity)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center" })
+                                .HeaderHtmlAttributes(new { style = "text-align: right" })
+                                .HtmlAttributes(new { style = "text-align: right" })
+                                ;
+                            col.Bound(a => a.UoM)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center" })
+                                .HeaderHtmlAttributes(new { style = "text-align: left" })
+                                .HtmlAttributes(new { style = "text-align: left" })
+                                ;
+                            col.Bound(a => a.IsRepeatOrderCode)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center" })
+                                .HeaderHtmlAttributes(new { style = "text-align: left" })
+                                .HtmlAttributes(new { style = "text-align: left" })
+                                .Title("Repeat Order")
+                                .ClientTemplate("# if (IsRepeatOrderCode == 0) { #" +
+                                                                "<span style='color: Red'>#: kendo.toString('No') #</span>" +
+                                                                "# } else if (IsRepeatOrderCode = 1) { #" +
+                                                                "<span style='color: Green'>#: kendo.toString('Yes') #</span>" +
+                                                                "# } #")
+                                ;
+                            col.Bound(a => a.ReferencePrPo)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center" })
+                                .HeaderHtmlAttributes(new { style = "text-align: left" })
+                                .HtmlAttributes(new { style = "text-align: left" })
+                                ;
+                            col.ForeignKey(a => a.ItemStatusCode,
+                                    (System.Collections.IEnumerable)ViewData["itemStatus"],
+                                    "Value",
+                                    "Text"
+                                ).Title("Item Status")
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center" })
+                                .HeaderHtmlAttributes(new { style = "text-align: left" })
+                                .HtmlAttributes(new { style = "text-align: left" })
+                                .Width(130)
+                                .ClientTemplate("# if (ItemStatusCode == 0) { #" +
+                                                                "<span style='color: Green'>#: kendo.toString('Acknowledged') #</span>" +
+                                                                "# } else if (ItemStatusCode == 1) { #" +
+                                                                "<span style='color: Orange'>#: kendo.toString('Canvassed') #</span>" +
+                                                                "# } else if (ItemStatusCode == 2) { #" +
+                                                                "<span style='color: Red'>#: kendo.toString('Rejected') #</span>" +
+                                                                "# } else if (ItemStatusCode == 3) { #" +
+                                                                "<span style='color: Blue'>#: kendo.toString('Completed') #</span>" +
+                                                                "# } #")
+                                .Visible(true);
+                            col.Bound(a => a.Remarks)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center" })
+                                .HeaderHtmlAttributes(new { style = "text-align: left" })
+                                .HtmlAttributes(new { style = "text-align: left" })
+                                ;
+                            col.Bound(a => a.SupplierName)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center" })
+                                .HeaderHtmlAttributes(new { style = "text-align: left" })
+                                .HtmlAttributes(new { style = "text-align: left" })
+                                ;
+                            col.Bound(a => a.Comments)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center" })
+                                .HeaderHtmlAttributes(new { style = "text-align: left" })
+                                .HtmlAttributes(new { style = "text-align: left" })
+                                ;
+                            col.Bound(a => a.Feedback)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center" })
+                                .HeaderHtmlAttributes(new { style = "text-align: left" })
+                                .HtmlAttributes(new { style = "text-align: left" })
+                                ;
+                            col.Bound(a => a.DateCreated)
+                               .Format("{0:dd/MM/yyyy HH:mm:ss}")
+                               .Visible(false);
+                            col.Bound(a => a.DateModified)
+                               .Format("{0:dd/MM/yyyy HH:mm:ss}")
+                               .Visible(false);
+                            col.Bound(a => a.DateCanvassed)
+                               .Format("{0:dd/MM/yyyy HH:mm:ss}")
+                               .HtmlAttributes(new { id = "dateCanvassed" })
+                               .Visible(false);
+                            col.Bound(a => a.DateRejected)
+                              .Format("{0:dd/MM/yyyy HH:mm:ss}")
+                              .HtmlAttributes(new { id = "dateRejected" })
+                              .Visible(false);
+                            col.Bound(a => a.DateAcknowledged)
+                              .Format("{0:dd/MM/yyyy HH:mm:ss}")
+                              .Visible(false);
+                            col.Command(commands =>
+                            {
+                                commands.Edit().HtmlAttributes(new { id = "editBtn", style = "width: 150px; text-align: left; padding-left: 25px" });                                            // The "edit" command will edit and update data items
+                                commands.Custom(" Upload Quote").HtmlAttributes(new { id = "uploadBtn", style = "width: 150px; text-align: left; padding-left: 25px " });
+                                commands.Custom(" View Quote").HtmlAttributes(new { id = "viewBtn", style = "width: 150px; text-align: left; padding-left: 25px " });
+
+                            })
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                .HeaderHtmlAttributes(new { style = "text-align: center" })                                
+                                .HtmlAttributes(new { style = "text-align: center" })
+                                .Title("Commands")
+                                .Width(200);
+
+                        })
+                    .AutoBind(false)
+                    .Pageable(pager => pager
+                        .PageSizes(new[] { 20, 40, 60, 80, 100 })                                // Default page sizes are 5, 10 and 20
+                        .Refresh(true).Messages(
+                            messages => messages.Refresh("Click to refresh"))
+                        )
+                    .Sortable()
+                    .Scrollable()
+                    .Resizable(resizable => resizable.Columns(true))
+                    .Navigatable()
+                    .DataSource(ds =>
+                        {
+                            ds.Ajax()
+                              .ServerOperation(false)
+                              .Events(events => events.Error("onGridError"))
+                              .Model(model =>
+                              {
+                                  model.Id(a => a.Guid);
+                                  model.Field(a => a.ItemStatusCode);
+
+                              })
+                              .Read(read => read.Action("RfqTransDetailsBuyer_Read", "Grid").Data("additionalInfo"))
+                              .Update(update => update.Action("RfqTransDetailsBuyer_Update", "Grid"));
+                        })
+                    .Events(e => e.Edit("onGridEdit"))
+                    .Events(e => e.DataBound("onRowBound").Cancel("onCancel"))
+                    .Events(e => e.ExcelExport("RepeatOrderText"))
+                )
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="col-md-1" style="float: right; padding-right: 340px">
+        <table class="table table-striped">
+            <tr>
+                <td>
+                    <button type="button" class="btn btn-success btn-md" id="btnSubmit" disabled="disabled"
+                        style="width: 150px">
+                        <i class="fa fa-paper-plane"></i>&nbsp; Submit</button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger btn-md" id="btnCancel" style="width: 150px">
+                        <i class="fa fa-ban"></i>&nbsp; Cancel</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+
+    var wnd;
+
+    $(document).ready(function () {
+
+        wnd = $("#modalWindow").kendoWindow({
+            title: "Large File Size",
+            modal: true,
+            visible: false,
+            resizable: false,
+            width: 300
+        }).data("kendoWindow");
+
+        var rfqNo = '@ViewBag.RfqNo';
+        var user = $("#user").val();
+
+        $.ajax({
+
+            url: '/Home/BuyerAccess/'
+            , type: 'POST'
+            , data: JSON.stringify({ userName: user })
+            , contentType: 'application/json'
+            , success: function (userSuccess) {
+
+
+                var userAcess = nullToString(userSuccess[0].UserAccess);
+
+
+                if (userAcess == "write") {
+
+                    if (rfqNo != "") {
+                        $("#btnRetrieve").click();
+                    }
+
+                }
+
+                else {
+
+                    window.location.href = '/Home/AccessDenied/';
+
+                }
+
+            }
+        });
+
+        $("#searRfQNo").keyup(function () {
+            var val = $('#searRfQNo').val();
+            //            var val = Number($("#searRfQNo").find("input").val());
+            $("#gridMyRfQs").data("kendoGrid").dataSource.filter({
+                //                logic: "or",
+                filters: [
+                        {
+                            field: "RfqNumber",
+                            //                            operator: "startsWith",
+                            operator: "contains",
+                            value: val
+                        }
+                       ]
+            });
+
+        });
+    });
+
+    $('#listOfRfqs').click(function (e) {
+
+        $('#winListOfRFQs').modal('show');
+
+        $("#gridMyRfQs").data("kendoGrid").dataSource.read();
+        $('#gridMyRfQs').data('kendoGrid').refresh();
+
+
+        e.preventDefault();
+    })
+
+    var ID;
+    function onChange(args) {
+        var model = this.dataItem(this.select());
+        ID = model.RfqNumber;
+    }
+
+    $("#gridMyRfQs").on("dblclick", "tr.k-state-selected", function () {
+
+        $('#rfqNumber').val(ID);
+
+        var el = $("input:text").get(0);
+        var elemLen = el.value.length; el.selectionStart = elemLen;
+        el.selectionEnd = elemLen;
+        el.focus();
+
+
+        $("#btnRetrieve").click();
+    });
+
+    var IsRepeatOrderCode = [{
+        "value": 0,
+        "text": "No"
+    }, {
+        "value": 1,
+        "text": "Yes"
+    }];
+
+    function RepeatOrderText(e) {
+        var workbook = e.workbook;
+        var sheet = workbook.sheets[0];
+
+        for (var i = 1; i < sheet.rows.length; i++) {
+            var value = sheet.rows[i].cells[8].value;
+            var repeatOrder = $.grep(IsRepeatOrderCode, function (item) {
+                return item.value == value;
+            })[0];
+
+            if (repeatOrder) {
+                sheet.rows[i].cells[8].value = repeatOrder.text;
+            }
+        }
+    }
+
+    function onRowBoundGridDrawSpec(e) {
+
+        e.sender.tbody.find(".k-grid-Download").each(function (idx, element) {
+            $(element).removeClass("fa fa-upload").find("span").addClass("fa fa-download");
+        });
+    }
+
+    $(document).on('click', '#btnDownload', function () {
+
+        var grid = $("#gridDrawSpec").data("kendoGrid");
+
+        var tr = $(this).closest("tr");     //get the row
+        var data = grid.dataItem(tr);
+
+        var fileGuid = data.FileID;
+
+        $('#fileGuid').val(fileGuid);
+
+        var url = '@Url.Action("LoadUserFile", "Home", new { fileId = "XXX" })';
+        var fileId = fileGuid;
+        url = url.replace("XXX", fileId);
+        location.href = url;
+    });
+
+    $(document).on('click', '#btnViewFileUploaded', function (e) {
+
+        var grid = $('#gridRfqTransactionDetails').data("kendoGrid");
+
+        var tr = $(e.target).closest("tr"); //get the row
+        var data = grid.dataItem(tr);
+
+        var transDetailsGuid = data.Guid;
+
+        $('#transDetailsGuid').val(transDetailsGuid);
+
+        $("#gridDrawSpec").data("kendoGrid").dataSource.read();
+        $('#gridDrawSpec').data('kendoGrid').refresh();
+
+        $('#winFilesDrawSpec').modal('show');
+    });
+
+    function checkFile(fieldObj) {
+        var FileName = fieldObj.value;
+        var FileExt = FileName.substr(FileName.lastIndexOf('.') + 1);
+        var FileSize = fieldObj.files[0].size;
+        var FileSizeMB = (FileSize / (1024 * 1024)).toFixed(2);
+
+        if (FileSize > 5485760) {
+            var error = "File type : " + FileExt + "\n\n";
+            error += "Size: " + FileSizeMB + " MB \n\n";
+            error += "Please make sure your file is less than 5 MB.\n\n";
+
+            //            alert(error);
+
+            wnd.title("<span style='font-family: 'Franklin Gothic Book'; font-weight: bold' class='fa fa-exclamation-circle text-danger'>&nbsp;&nbsp;Large File Size</span>");
+            $("#modalWindow").parent().find(".k-window-action").css("visibility", "hidden");
+            wnd.content("<br/>Please make sure your file is less than 5 MB. <br/><br/> <span> <button id='OkClose' style='float: right' class='k-button'>Ok</button></span>");
+            wnd.center().open();
+
+            fieldObj.value = ""
+            return false;
+        }
+        return true;
+    }
+
+    $(document).on('click', '#OkClose', function (e) {
+        wnd.close();
+
+    });
+
+    $("#btnFileUpload").click(function () {
+
+        if ($("#file").val() == "" || $("#file").val() == null) {
+
+            //            alert("Please browse first before uploading");
+
+            wnd.title("<span style='font-family: 'Franklin Gothic Book'; font-weight: bold' class='fa fa-exclamation-circle text-danger'>&nbsp;&nbsp;No File Chosen</span>");
+            $("#modalWindow").parent().find(".k-window-action").css("visibility", "hidden");
+            wnd.content("<br/>Please browse first before uploading. <br/><br/> <span> <button id='OkClose' style='float: right' class='k-button'>Ok</button></span>");
+            wnd.center().open();
+
+            return false;
+        }
+
+        else {
+
+            return true;
+        }
+
+    });
+
+
+
+    function nullToString(str) {
+
+        return (str == null ? "" : str);
+    }
+
+
+    $(document).on('keypress', '#rfqNumber', function (e) {
+
+        if (e.keyCode == 13) $("#btnRetrieve").click();
+    });
+
+    var jmodal = new jBox('Modal', {
+
+        content: $('#jboxContent')
+
+        , width: 380
+        , height: 230
+        , closeOnClick: false
+        , closeButton: false
+        , closeOnEsc: false
+
+    });
+
+    var winFiles = $("#winFiles").kendoWindow({
+        width: 900,
+        title: " <p style='margin-left:5px'><span style='font-family: 'Franklin Gothic Book'; font-weight: bold' class='fa fa-th-list fa-lg'>&nbsp;&nbsp;View Attachments</span></p>",
+        height: 350,
+        visible: false,
+        modal: true,
+        resizable: true
+    });
+
+    var winViewFile = $("#winViewFile").kendoWindow({
+        width: 400,
+        title: " <p style='margin-left:5px'><span style='font-family: 'Franklin Gothic Book'; font-weight: bold' class='fa fa-eye fa-lg'>&nbsp;&nbsp;View Image</span></p>",
+        height: 350,
+        visible: false,
+        modal: true,
+        resizable: true
+    });
+
+    $(document).on('click', '#viewBtn', function (e) {
+
+        winFiles.data("kendoWindow").center().open();
+
+        var grid = $('#gridRfqTransactionDetails').data("kendoGrid");
+
+        var tr = $(e.target).closest("tr"); //get the row
+        var data = grid.dataItem(tr);
+
+
+        var transDetailsGuid = data.Guid;
+        var rfqNo = data.RfqNumber;
+
+        $('#transDetailsGuid').val(transDetailsGuid);
+        $('#transRfqNumber').val(rfqNo);
+
+        $("#gridFiles").data("kendoGrid").dataSource.read();
+        $('#gridFiles').data('kendoGrid').refresh();
+
+    });
+
+    $(document).on('click', '#uploadBtn', function (e) {
+
+        jmodal.open();
+
+        var grid = $('#gridRfqTransactionDetails').data("kendoGrid");
+
+        var tr = $(e.target).closest("tr"); //get the row
+        var data = grid.dataItem(tr);
+
+
+        var connector = data.Guid;
+        var rfqNo = data.RfqNumber;
+
+        $('#transDetailsGuid').val(connector);
+        $('#transRfqNumber').val(rfqNo);
+
+    });
+
+    $(document).on('click', '#btnNo', function () {
+
+        jmodal.close();
+        return false
+
+    });
+
+
+
+    $(document).on('click', '#downloadAttachBtn', function () {
+
+        var grid = $("#gridFiles").data("kendoGrid");
+
+        var tr = $(this).closest("tr");     //get the row
+        var data = grid.dataItem(tr);
+
+        var fileGuid = data.FileID;
+
+        $('#fileGuid').val(fileGuid);
+
+        var url = '@Url.Action("LoadFile", "Home", new { fileId = "XXX" })';
+        var fileId = fileGuid;
+        url = url.replace("XXX", fileId);
+        location.href = url;
+    });
+
+    $(document).on('click', '#viewAttachBtn', function () {
+
+        var grid = $("#gridFiles").data("kendoGrid");
+
+        var tr = $(this).closest("tr");     //get the row
+        var data = grid.dataItem(tr);
+
+        var fileGuid = data.FileID;
+
+        $('#fileGuid').val(fileGuid);
+
+        var newFile = $('#viewImg');
+
+        newFile.attr('src', '/Home/ViewFile?fileId=' + $('#fileGuid').val());
+
+        winViewFile.data("kendoWindow").center().open();
+
+    });
+
+
+    function paramBuyer() {
+        return {
+
+            fromBuyer: $('#rfqBuyer').val()
+        }
+    }
+
+    function additionalInfo() {
+        return {
+
+            rfqNo: $('#rfqNumber').val(),
+            rfqTransDetailsGuid: $('#transDetailsGuid').val()
+        }
+    }
+
+    function onRowBound(e) {
+
+        e.sender.tbody.find(".k-grid-ViewSpec").each(function (idx, element) {
+            $(element).removeClass("fa fa-eye").find("span").addClass("fa fa-eye");
+        });
+
+        e.sender.tbody.find(".k-grid-UploadQuote").each(function (idx, element) {
+            $(element).removeClass("fa fa-upload").find("span").addClass("fa fa-upload");
+        });
+
+        e.sender.tbody.find(".k-grid-ViewQuote").each(function (idx, element) {
+            $(element).removeClass("fa fa-eye").find("span").addClass("fa fa-eye");
+        });
+    }
+
+    function onCancel(e) {
+        setTimeout(function () {
+
+            //            e.preventDefault();
+            //            e.sender.refresh();
+
+            e.sender.tbody.find(".k-grid-ViewSpec").each(function (idx, element) {
+                $(element).removeClass("fa fa-eye").find("span").addClass("fa fa-eye");
+            });
+
+            e.sender.tbody.find(".k-grid-UploadQuote").each(function (idx, element) {
+                $(element).removeClass("fa fa-upload").find("span").addClass("fa fa-upload");
+            });
+
+            e.sender.tbody.find(".k-grid-ViewQuote").each(function (idx, element) {
+                $(element).removeClass("fa fa-eye").find("span").addClass("fa fa-eye");
+            });
+        });
+    }
+
+    function onRowBoundGridFiles(e) {
+
+        //        $(".k-grid-Download").find("span").addClass("k-icon fa fa-download");
+        //        $(".k-grid-View").find("span").addClass("k-icon fa fa-eye");
+
+        e.sender.tbody.find(".k-grid-Download").each(function (idx, element) {
+            $(element).removeClass("fa fa-upload").find("span").addClass("fa fa-download");
+        });
+
+        e.sender.tbody.find(".k-grid-Delete").each(function (idx, element) {
+            $(element).removeClass("fa fa-trash").find("span").addClass("fa fa-trash");
+        });
+    }
+
+    function openWindowQuote(e) {
+        e.preventDefault();
+
+        var grid = this;
+        var row = $(e.currentTarget).closest("tr");
+        wnd.title("Delete Record");
+        wnd.center().open();
+
+        $("#yes").click(function () {
+            grid.removeRow(row);
+            grid.saveChanges();
+            wnd.close();
+        });
+
+        $("#no").click(function () {
+            wnd.close();
+        });
+    }
+
+    function onGridError(e) {
+        if (e.errors) {
+            var message = "There are some errors:\n";
+            // Create a message containing all errors.
+            $.each(e.errors, function (key, value) {
+                if ('errors' in value) {
+                    $.each(value.errors, function () {
+                        message += this + "\n";
+                    });
+                }
+            });
+            // Display the message
+            alert(message);
+            // Cancel the changes
+            var grid = $("#gridRfqTransactionDetails").data("kendoGrid");
+            grid.cancelChanges();
+        }
+    }
+
+    function onGridErrorRfqList(e) {
+        if (e.errors) {
+            var message = "There are some errors:\n";
+            // Create a message containing all errors.
+            $.each(e.errors, function (key, value) {
+                if ('errors' in value) {
+                    $.each(value.errors, function () {
+                        message += this + "\n";
+                    });
+                }
+            });
+            // Display the message
+            alert(message);
+            // Cancel the changes
+            var grid = $("#gridMyRfQs").data("kendoGrid");
+            grid.cancelChanges();
+        }
+    }
+
+    var transDetailsGuid;
+
+    function onGridEdit(e) {
+
+        $('.k-window-title').text((e.model.isNew() ? "New" : "Edit") + " Record");
+        e.container.find('.k-grid-update,.k-grid-cancel').css('display', 'inline-block');
+        $('.k-grid-update').text((e.model.isNew() ? "Add" : "Update") + " Record");
+
+        $('.k-grid-update').bind('click', function (e) {
+
+            var textBox = document.getElementById("rfqComments");
+
+            var textLength = textBox.value.length;
+
+            var rfqItemStat = $("#rfqItemStatus").data("kendoDropDownList").text();
+
+            var supplier = document.getElementById("rfqSupplierName");
+
+            var suppliertextLength = supplier.value.length;
+
+
+            transDetailsGuid = document.getElementById("rfqTransGuid").value;     
+
+            if (rfqItemStat == "Rejected" && textLength == 0) {
+                //                alert("test");               
+
+                wnd.title("<span style='font-family: 'Franklin Gothic Book'; font-weight: bold' class='fa fa-exclamation-circle text-danger'>&nbsp;&nbsp;Comments Required</span>");
+                $("#modalWindow").parent().find(".k-window-action").css("visibility", "hidden");
+                wnd.content("<br/>Comments are required if Item Status is Rejected. <br/><br/> <span> <button id='OkClose' style='float: right' class='k-button'>Ok</button></span>");
+                wnd.center().open();
+
+                return false;
+            }
+
+            else {
+
+                if (suppliertextLength > 0 && textLength >= 5) {
+
+                    wnd.title("<span style='font-family: 'Franklin Gothic Book'; font-weight: bold' class='fa fa-question text-warning'>&nbsp;&nbsp;Send Notification</span>");
+                    $("#modalWindow").parent().find(".k-window-action").css("visibility", "hidden");
+                    wnd.content("<br/>Do you want to notify the requestor? <br/><br/> <span> <div class='btn-group' style='float: right'> <button id='OkClose' class='k-button'>No</button><button id='YesClose' class='k-button'>Yes</button></div></span>");
+                    wnd.center().open();
+
+                    return true;
+
+                }                
+
+                return true;
+
+            }
+        });
+    }
+
+    $(document).on('click', '#YesClose', function (e) {
+
+        var userEmail = $('#userEmail').val();
+
+        $.ajax({
+
+            url: '/Home/SendEmailNotificationComments/'
+                    , data: JSON.stringify({ userEmail: userEmail, rfqNumber: $("#rfqNumber").val(), rfqTransGuid: transDetailsGuid, userFullname: $('#rfqRequestor').val(), dept: $('#rfqDepartment').val(), rfqBuyer: $('#rfqBuyer').val() })
+                    , type: 'POST'
+                    , contentType: 'application/json'
+                    , success: function (content) {
+
+                        $("#gridRfqTransactionDetails").data("kendoGrid").dataSource.read();
+
+                    }
+
+        });
+
+        wnd.close();
+
+
+    });
+
+
+    function onSelectBuyer(e) {
+
+        var dataItem = this.dataItem(e.item);
+
+        var ddlBuyerName = dataItem.FullName;
+
+        $("#ddlBuyer").data("kendoDropDownList").text(ddlBuyerName);
+    }
+
+    function onChangeBuyer(e) {
+
+
+        if ($("#rfqNumber").val() != "" && $("#ddlBuyer").data("kendoDropDownList").text() != " ") {
+
+            wnd.title("<span style='font-family: 'Franklin Gothic Book'; font-weight: bold' class='fa fa-question text-warning'>&nbsp;&nbsp;Send Notification</span>");
+            $("#modalWindow").parent().find(".k-window-action").css("visibility", "hidden");
+            wnd.content("<br/>Do you want to notify the re-assigned buyer? <br/><br/> <span> <div class='btn-group' style='float: right'> <button id='OkCloseBuyer' class='k-button'>No</button><button id='YesCloseBuyer' class='k-button'>Yes</button></div></span>");
+            wnd.center().open();
+
+        }
+
+
+    }
+
+    $(document).on('click', '#OkCloseBuyer', function (e) {
+
+        var rfqNo = $('#rfqNumber').val();
+        var rfqReassignedBuyer = $("#ddlBuyer").data("kendoDropDownList").text();
+
+        $.ajax({
+            url: '/Home/UpdateReassignedBuyer/'
+                , data: JSON.stringify({ rfqNumber: rfqNo, reassignedBuyer: rfqReassignedBuyer })
+                , type: 'POST'
+                , contentType: 'application/json'
+                , success: function (content) {                                       
+
+                }
+        });       
+
+        wnd.close();
+
+    });
+
+    $(document).on('click', '#YesCloseBuyer', function (e) {
+
+        var userEmail = "";
+        var rfqNo = $('#rfqNumber').val();
+        var rfqReassignedBuyer = $("#ddlBuyer").data("kendoDropDownList").text();
+
+        $.ajax({
+                            url: '/Home/UpdateReassignedBuyer/'
+                                    , data: JSON.stringify({ rfqNumber: rfqNo, reassignedBuyer: rfqReassignedBuyer })
+                                    , type: 'POST'
+                                    , contentType: 'application/json'
+                                    , success: function (content) {
+
+                                        $.ajax({
+
+                                            url: '/Home/SendEmailNotificationReassignedBuyer/'
+                                            , data: JSON.stringify({ userEmail: userEmail, rfqNumber: $("#rfqNumber").val(), userFullname: $('#rfqRequestor').val(), dept: $('#rfqDepartment').val(), rfqFromBuyer: $('#rfqBuyer').val(), rfqToBuyer: $("#ddlBuyer").data("kendoDropDownList").text() })
+                                            , type: 'POST'
+                                            , contentType: 'application/json'
+                                            , success: function (content) {
+
+                                                $.ajax({
+
+                                                    url: '/Home/GoToIndex/'
+                                                    , type: 'POST'
+                                                    , contentType: 'application/json'
+                                                    , success: function (content) {
+
+                                                        window.location.href = content;
+
+                                                    }
+                                                });
+
+                                            }
+
+                                        });
+
+                                    }
+        });       
+
+        wnd.close();
+
+
+    });
+
+    
+
+
+    $('#btnCancel').click(function () {
+
+
+        $.ajax({
+
+            url: '/Home/GoToIndex/'
+                , type: 'POST'
+                , contentType: 'application/json'
+                , success: function (content) {
+
+                    window.location.href = content;
+
+                }
+        });
+
+    });
+
+    $("#btnRetrieve").click(function (e) {
+
+        $('#winListOfRFQs').modal('hide');
+
+        var rfqNo = $('#rfqNumber').val();
+
+        if (rfqNo == "") {
+
+            notification = "Please enter RfQ Number!";
+
+            $('#pmodalNotification').html(notification).css("text-align", "center");
+
+            $('#modalNotification').modal('show');
+
+        }
+
+        else {
+
+            $.ajax({
+
+                url: '/Home/UpdateRfQStatusByBuyer/'
+                            , data: JSON.stringify({ rfqNumber: rfqNo })
+                            , type: 'POST'
+                            , contentType: 'application/json'
+                            , success: function (content) {
+
+                                if (content == "") {
+
+                                    //                                    notification = "- Either RFQ number does not exist or <br> - Already completed";
+
+                                    //                                    notification = "<ul class='list-group'>" +
+                                    //                                                   "<li class='list-group-item'>RFQ number does not exist</li>" +
+                                    //                                                   "<li class='list-group-item'>Already completed</li>" +                                                   
+                                    //                                                   "</ul>"
+
+                                    notification = "RFQ number does not exist. Please try again.";
+
+                                    $('#pmodalNotification').html(notification).css("text-align", "center");
+
+                                    $('#modalNotification').modal('show');
+                                }
+
+                                else if (content == "Draft") {
+
+                                    notification = "RfQ number is in draft status!";
+
+                                    $('#pmodalNotification').html(notification).css("text-align", "center");
+
+                                    $('#modalNotification').modal('show');
+                                }
+
+                                else {
+
+                                    $('#rfqRequestor').val(content[0].Requestor);
+                                    $('#rfqDepartment').val(content[0].Department);
+                                    $("#rfqType").val(content[0].Type);
+                                    $("#rfqCategory").val(content[0].Category);
+                                    $('#rfqBuyer').val(content[0].Buyer);
+                                    $("#ddlBuyer").data("kendoDropDownList").text(content[0].ReAssignedBuyerTo);
+                                    $('#hidStatus').val(content[0].Status);
+
+                                    $("#gridRfqTransactionDetails").data("kendoGrid").dataSource.read();
+
+//                                    if (content[0].ReAssignedBuyerTo == null || content[0].ReAssignedBuyerTo == "") {
+                                        $("#ddlBuyer").data("kendoDropDownList").dataSource.read();
+//                                    }
+
+                                    $.ajax({
+
+                                        url: '/Home/UpdateRfQStatusByBuyerToAck/'
+                                                , data: JSON.stringify({ rfqNumber: rfqNo })
+                                                , type: 'POST'
+                                                , contentType: 'application/json'
+                                                , success: function (content) {
+
+                                                    $("#gridRfqTransactionDetails").data("kendoGrid").dataSource.read();
+                                                }
+                                    });
+
+                                    $('#btnSubmit').attr('disabled', false);
+
+                                }
+                            }
+            });
+        }
+    });
+
+    $("#btnSubmit").click(function (e) {
+
+        var rfqNo = $('#rfqNumber').val();
+
+//        var rfqReassignedBuyer = $("#ddlBuyer").data("kendoDropDownList").text();
+
+        $.ajax({
+
+            url: '/Home/UpdateRfQStatusToOverAllStatus/'
+                            , data: JSON.stringify({ rfqNumber: rfqNo })
+                            , type: 'POST'
+                            , contentType: 'application/json'
+                            , success: function (content) {
+
+                                if (content[0].RfqNumber != "") {
+
+                                    $('#btnSubmit').attr('disabled', 'disabled');
+
+                                    var msg = "RfQ was successfully updated";
+
+                                    $('#pmodalNotificationSuccess').html(msg).css("text-align", "center");
+
+                                    $('#modalNotificationSuccess').modal('show');
+                                }
+
+//                                $.ajax({
+//                                    url: '/Home/UpdateReassignedBuyer/'
+//                                    , data: JSON.stringify({ rfqNumber: rfqNo, reassignedBuyer: rfqReassignedBuyer })
+//                                    , type: 'POST'
+//                                    , contentType: 'application/json'
+//                                    , success: function (content) {
+
+
+//                                    }
+//                                });
+
+                            }
+        });
+
+
+
+        e.preventDefault();
+
+    });
+</script>

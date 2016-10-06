@@ -1,0 +1,262 @@
+﻿@model RFQWebApp.Models.RfqTransactionDetails
+@Html.HiddenFor(model => model.Guid)
+@Html.HiddenFor(model => model.RfqNumber)
+@Html.HiddenFor(model => model.DrawingSpecification)
+@Html.HiddenFor(model => model.DateCreated)
+@Html.HiddenFor(model => model.DateModified)
+@Html.HiddenFor(model => model.DateAcknowledged)
+@Html.HiddenFor(model => model.CreatedBy)
+@Html.HiddenFor(model => model.ModifiedBy)
+@Html.HiddenFor(model => model.AcknowledgedBy)
+@Html.HiddenFor(model => model.Comments)
+@Html.HiddenFor(model => model.SupplierName)
+@Html.HiddenFor(model => model.ItemStatusCode)
+@Html.ValidationSummary(true)
+<style type="text/css">
+    .itemName
+    {
+        border-color: #7bd2f6;
+        width: 200px;
+    }
+    .itemDesc
+    {
+        border-color: #7bd2f6;
+    }
+    @*.drawSpec
+    {
+        border-color: #7bd2f6;
+        width: 200px;
+    }*@
+    .supplierItemPN
+    {
+        border-color: #7bd2f6;
+        width: 200px;
+    }
+    .itemNoOracleNo
+    {
+        border-color: #7bd2f6;
+        width: 200px;
+    }
+    .machineModel
+    {
+        border-color: #7bd2f6;
+        width: 200px;
+    }
+    .serialNo
+    {
+        border-color: #7bd2f6;
+        width: 200px;
+    }
+    .quantity
+    {
+        border-color: #7bd2f6;
+        width: 200px;
+    }
+    .uom
+    {
+        border-color: #7bd2f6;
+        width: 200px;
+    }
+    .repeatOrderDropDownEditor
+    {
+        border-color: #7bd2f6;
+        width: 200px;
+    }
+    .uomDropDownEditor
+    {
+        border-color: #7bd2f6;
+        width: 200px;
+    }
+    .referencePrPo
+    {
+        border-color: #7bd2f6;
+        width: 200px;
+    }
+    .remarks
+    {
+        border-color: #7bd2f6;
+    }
+    .table th, .table td { 
+         border-top: none !important; 
+    }  
+</style>
+@*<input id='txtGUID' value='@System.Guid.NewGuid().ToString().ToUpper()'/>*@
+<div class="container-fluid">
+    <table class="table">
+        <tr>
+            <td style="text-align: right; vertical-align: middle">
+                <label for="itemDesc">
+                    Item Description:</label>
+            </td>
+            <td style="text-align: center; vertical-align: bottom">
+                @Html.TextAreaFor(model => model.ItemDescription, new { @id = "rfqItemDesc", @class = "itemDesc", @cols = 25, @rows = 5, @maxlength = "255", @placeholder = "Minimum of 5 characters and maximum lenght of 255 characters." })
+                @Html.ValidationMessageFor(m => m.ItemDescription)
+                <div id="textareaItemDesc" style="font-family: 'Times New Roman', Times, serif;
+                    font-size: medium; color: #000000; text-align: left; margin-left: 35px">
+                </div>
+            </td>
+        </tr>
+        @* <tr>
+            <td style="text-align: right; vertical-align: bottom">
+                <label for="drawSpec">
+                    Drawing / Spec:</label>
+            </td>
+            <td style="text-align: center; vertical-align: bottom">
+                @Html.TextBoxFor(model => model.DrawingSpecification, new { @class = "drawSpec" })
+                @Html.Kendo().TextBoxFor(model => model.DrawingSpecification).HtmlAttributes(new { @class = "drawSpec" })
+                @Html.ValidationMessageFor(m => m.DrawingSpecification)
+                <div class="btn-group">
+                <button id="btnOpenFileUpload" type="button" class="btn btn-primary btn-sm" style="width: 80px">
+                        <i class="fa fa-upload"></i>&nbsp; Upload
+                    </button>
+
+                    <button id="btnViewFileUploaded" type="button" class="btn btn-warning btn-sm" style="width: 80px">
+                        <i class="fa fa-eye"></i>&nbsp; View
+                    </button>
+
+                       @(Html.Kendo().Button()
+                            .Name("btnOpenFileUpload")
+                            .SpriteCssClass("fa fa-upload")
+                            .Content("Upload")
+                            .HtmlAttributes(new { @class = "btn btn-info btn-sm;", style="width: 80px", title = "Upload drawing spec" })
+                       )
+
+                       @(Html.Kendo().Button()
+                            .Name("btnViewFileUploaded")
+                            .SpriteCssClass("fa fa-eye")
+                            .Content("View")
+                            .HtmlAttributes(new { @class = "btn btn-info btn-sm", style = "width: 80px", title = "View uploaded files" })
+                       )
+                </div>
+            </td>
+        </tr>*@
+        <tr>
+            <td style="text-align: right; vertical-align: bottom">
+                <label for="supplierItemPN">
+                    Supplier Item/PN:</label>
+            </td>
+            <td style="text-align: center; vertical-align: bottom">
+                @*@Html.TextBoxFor(model => model.SupplierItemPN, new { @class = "supplierItemPN" })*@
+                @Html.Kendo().TextBoxFor(model => model.SupplierItemPN).HtmlAttributes(new { @class = "supplierItemPN", @maxlength = "50" })
+                @Html.ValidationMessageFor(m => m.SupplierItemPN)
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: right; vertical-align: bottom">
+                <label for="itemNoOracleNo">
+                    Item #/Oracle #:</label>
+            </td>
+            <td style="text-align: center; vertical-align: bottom">
+                @*@Html.TextBoxFor(model => model.ItemNoOracleNo, new { @class = "itemNoOracleNo" })*@
+                @Html.Kendo().TextBoxFor(model => model.ItemNoOracleNo).HtmlAttributes(new { @class = "itemNoOracleNo", @maxlength = "50" })
+                @Html.ValidationMessageFor(m => m.ItemNoOracleNo)
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: right; vertical-align: bottom">
+                <label for="machineModel">
+                    Machine Model:</label>
+            </td>
+            <td style="text-align: center; vertical-align: bottom">
+                @*@Html.TextBoxFor(model => model.MachineModel, new { @class = "machineModel" })*@
+                @Html.Kendo().TextBoxFor(model => model.MachineModel).HtmlAttributes(new { @class = "machineModel", @maxlength = "50" })
+                @Html.ValidationMessageFor(m => m.MachineModel)
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: right; vertical-align: bottom">
+                <label for="serialNo">
+                    Serial #:</label>
+            </td>
+            <td style="text-align: center; vertical-align: bottom">
+                @*@Html.TextBoxFor(model => model.SerialNo, new { @class = "serialNo" })*@
+                @Html.Kendo().TextBoxFor(model => model.SerialNo).HtmlAttributes(new { @class = "serialNo", @maxlength = "50" })
+                @Html.ValidationMessageFor(m => m.SerialNo)
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: right; vertical-align: bottom">
+                <label for="quantity">
+                    Quantity:</label>
+            </td>
+            <td style="text-align: center; vertical-align: bottom">
+                @*@Html.EditorFor(model => model.Quantity, "quantity")*@
+                @Html.Kendo().NumericTextBoxFor(model => model.Quantity).HtmlAttributes(new { @class = "quantity" }).Format("{0:N0}").Min(1)
+                @Html.ValidationMessageFor(m => m.Quantity)
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: right; vertical-align: bottom">
+                <label for="uomDropDownEditor">
+                    UoM:</label>
+            </td>
+            <td style="text-align: center; vertical-align: bottom">
+                @Html.DropDownListFor(model => model.UoM,
+                                      new SelectList((System.Collections.IEnumerable)ViewData["UomCode"], "Value", "Text"),
+                                      "- Select Answer -",
+                                      new { @class = "uomDropDownEditor", @data_role = "dropdownlist", @data_bind = "value:UoM", @style = "text-transform: uppercase" })
+                @Html.ValidationMessageFor(model => model.UoM)
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: right; vertical-align: bottom">
+                <label for="repeatOrderDropDownEditor">
+                    Repeat Order:</label>
+            </td>
+            <td style="text-align: center; vertical-align: bottom">
+                @Html.DropDownListFor(model => model.IsRepeatOrderCode,
+                                 new SelectList((System.Collections.IEnumerable)ViewData["repeatOrder"], "Value", "Text"),
+                                 "- Select Answer -",
+                                 new { @class = "repeatOrderDropDownEditor", @data_role = "dropdownlist", @data_bind = "value:IsRepeatOrderCode", @style = "text-transform: uppercase" })
+                @Html.ValidationMessageFor(model => model.IsRepeatOrderCode)
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: right; vertical-align: bottom">
+                <label for="referencePrPo">
+                    Reference PR/PO:</label>
+            </td>
+            <td style="text-align: center; vertical-align: bottom">
+                @*@Html.TextBoxFor(model => model.ReferencePrPo, new { @class = "referencePrPo" })*@
+                @Html.Kendo().TextBoxFor(model => model.ReferencePrPo).HtmlAttributes(new { @class = "referencePrPo", @maxlength = "50" })
+                @Html.ValidationMessageFor(m => m.ReferencePrPo)
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: right; vertical-align: middle">
+                <label for="remarks">
+                    Remarks:</label>
+            </td>
+            <td style="text-align: center; vertical-align: bottom">
+                @Html.TextAreaFor(model => model.Remarks, new { @id = "rfqRemarks", @class = "remarks", @cols = 25, @rows = 5, @maxlength = "255" })
+                @Html.ValidationMessageFor(m => m.Remarks)
+                <div id="textareaRemarks" style="font-family: 'Times New Roman', Times, serif;
+                    font-size: medium; color: #000000; text-align: left; margin-left: 35px">
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var text_max = 255;
+        $('#textareaItemDesc').html(text_max + ' characters remaining');
+
+        $('#rfqItemDesc').keyup(function () {
+            var text_length = $('#rfqItemDesc').val().length;
+            var text_remaining = text_max - text_length;
+
+            $('#textareaItemDesc').html(text_remaining + ' characters remaining');
+        });
+
+        $('#textareaRemarks').html(text_max + ' characters remaining');
+
+        $('#rfqRemarks').keyup(function () {
+            var text_length = $('#rfqRemarks').val().length;
+            var text_remaining = text_max - text_length;
+
+            $('#textareaRemarks').html(text_remaining + ' characters remaining');
+        });
+    });   
+   
+</script>

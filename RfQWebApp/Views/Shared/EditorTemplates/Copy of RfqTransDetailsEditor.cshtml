@@ -1,0 +1,139 @@
+﻿@model RFQWebApp.Models.RfqTransactionDetails
+@Html.HiddenFor(model => model.Guid)
+@Html.HiddenFor(model => model.RfqNumber)
+@Html.HiddenFor(model => model.DateCreated)
+@Html.HiddenFor(model => model.DateModified)
+@Html.HiddenFor(model => model.ModifiedBy)
+@Html.ValidationSummary(true)
+<div class="itemName">
+    <div class="editor-label">
+        @Html.LabelFor(model => model.ItemName)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.ItemName, new { @style = "width: 290px" })
+        @Html.ValidationMessageFor(m => m.ItemName)
+    </div>
+</div>
+<div class="itemDesc">
+    <div class="editor-label">
+        @Html.LabelFor(model => model.ItemDescription)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.ItemDescription, new { @style = "width: 290px" })
+        @Html.ValidationMessageFor(m => m.ItemDescription)
+    </div>
+</div>
+<div class="drawingSpec">
+    <div class="editor-label">
+        @Html.LabelFor(model => model.DrawingSpecification)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.DrawingSpecification, new { @style = "width: 290px" })
+        @Html.ValidationMessageFor(m => m.DrawingSpecification)
+    </div>
+</div>
+<div class="supplierItemPN">
+    <div class="editor-label">
+        @Html.LabelFor(model => model.SupplierItemPN)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.SupplierItemPN, new { @style = "width: 290px" })
+        @Html.ValidationMessageFor(m => m.SupplierItemPN)
+    </div>
+</div>
+<div class="itemNoOracleNo">
+    <div class="editor-label">
+        @Html.LabelFor(model => model.ItemNoOracleNo)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.ItemNoOracleNo, new { @style = "width: 290px" })
+        @Html.ValidationMessageFor(m => m.ItemNoOracleNo)
+    </div>
+</div>
+<div class="itemNoOracleNo">
+    <div class="editor-label">
+        @Html.LabelFor(model => model.ItemNoOracleNo)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.ItemNoOracleNo, new { @style = "width: 290px" })
+        @Html.ValidationMessageFor(m => m.ItemNoOracleNo)
+    </div>
+</div>
+<div class="machineModel">
+    <div class="editor-label">
+        @Html.LabelFor(model => model.MachineModel)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.MachineModel, new { @style = "width: 290px" })
+        @Html.ValidationMessageFor(m => m.MachineModel)
+    </div>
+</div>
+<div class="serialNo">
+    <div class="editor-label">
+        @Html.LabelFor(model => model.SerialNo)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.SerialNo, new { @style = "width: 290px" })
+        @Html.ValidationMessageFor(m => m.SerialNo)
+    </div>
+</div>
+<div class="quantity">
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Quantity)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Quantity, new { @style = "width: 290px" })
+        @Html.ValidationMessageFor(m => m.Quantity)
+    </div>
+</div>
+<div class="uom">
+    <div class="editor-label">
+        @Html.LabelFor(model => model.UoM)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.UoM, new { @style = "width: 290px" })
+        @Html.ValidationMessageFor(m => m.UoM)
+    </div>
+</div>
+<div class="uom">
+    <div class="editor-label">
+        @Html.LabelFor(model => model.UoM)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.UoM, new { @style = "width: 290px" })
+        @Html.ValidationMessageFor(m => m.UoM)
+    </div>
+</div>
+<div class="repeatOrderDropDownEditor">
+    <div class="editor-label">
+        @Html.Label("Repeat Order")
+    </div>
+    <div class="editor-field">
+        @Html.DropDownListFor(model => model.IsRepeatOrderCode,
+                                 new SelectList((System.Collections.IEnumerable)ViewData["repeatOrder"], "Value", "Text"),
+                        "- Select Answer -",
+                                 new { @style = "width: 290px;", @data_role = "combobox", @data_bind = "value:IsRepeatOrderCode" })
+        @Html.ValidationMessageFor(model => model.IsRepeatOrderCode)
+    </div>
+</div>
+<div class="referencePrPo">
+    <div class="editor-label">
+        @Html.LabelFor(model => model.ReferencePrPo)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.ReferencePrPo, new { @style = "width: 290px" })
+        @Html.ValidationMessageFor(m => m.ReferencePrPo)
+    </div>
+</div>
+<div class="remarks">
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Remarks)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Remarks, new { @style = "width: 290px" })
+        @Html.ValidationMessageFor(m => m.Remarks)
+    </div>
+</div>
+
+
+

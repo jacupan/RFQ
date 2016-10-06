@@ -1,0 +1,317 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<style type="text/css">
+    .k-panelbar .k-header
+    {
+         border-width: 0;               
+    } 
+    ul.k-panelbar, ul.k-panelbar .k-group, ul.k-panelbar .k-content, ul.k-panelbar .k-link
+    {
+       border-width: 0;
+    }  
+
+    #welcomeNote {                     
+        -webkit-animation-name: example; /* Chrome, Safari, Opera */
+        -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+        animation-name: example;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+
+    #div1 {
+    
+        text-align: center;
+        white-space: normal;
+        display: inline-block;
+        word-wrap: break-word;
+    }
+
+    /* Chrome, Safari, Opera */
+    @@-webkit-keyframes example {
+        0%   {color: red;}
+        25%  {color: yellow;}
+        50%  {color: orange;}
+        75%  {color: blue;}
+        100% {color: green;}
+    }
+
+    /* Standard syntax */
+    @@keyframes example {
+        0%   {color: red;}
+        25%  {color: yellow;}
+        50%  {color: orange;}
+        75%  {color: blue;}
+        100% {color: green;}
+    }
+
+    #rfqImage {
+        max-width: 600px;                                
+        margin: 20px auto;
+        padding-top: 75px;
+        background: url('../../content/reqforquote1.jpg') no-repeat center 0;       
+    }    
+</style>
+<link href="@Url.Content("~/Content/font-awesome.css")" rel="stylesheet" type="text/css" />
+<div style="margin-top: 100px">
+    <div class="container-fluid">
+        <div class="col-md-6 col-md-offset-3">
+            <h1 id="welcomeNote" style="font-family: Franklin Gothic Book; text-align: center;
+                font-weight: bold; vertical-align: bottom">
+                Welcome to AMPI RFQ System</h1>
+            @*<div class="animatedDiv" id="div1"><h1 style="font-family: Franklin Gothic Book; text-align: center; font-weight: bold; vertical-align: bottom;">Welcome to AMPI RFQ System</h1></div>*@
+            @*<div class="animatedDiv" id="div2" style="text-align: right; font-family: 'Franklin Gothic Book'; "><h1><span>to</span></h1></div>
+            <div class="animatedDiv" id="div3" style="text-align: right; font-family: 'Franklin Gothic Book'; "><h1><span>AMPI</span></h1></div>
+            <div class="animatedDiv" id="div4" style="text-align: right; font-family: 'Franklin Gothic Book'; "><h1><span>RFQ</span></h1></div>
+            <div class="animatedDiv" id="div5" style="text-align: right; font-family: 'Franklin Gothic Book'; "><h1><span>System</span></h1></div>*@
+            @*<div style="margin-top: 60px">
+                <div class="container-fluid">
+                    <div class="row">
+                        @(Html.Kendo().PanelBar()
+                            .Name("panelbar-sprites")
+                            .Items(panelbar =>
+                            {
+                                panelbar.Add().Text("<span style='font-weight:bolder; font-family: 'Franklin Gothic Book'; vertical-align: middle;' class=\"fa fa-ticket text-success fa-3x fa-fw\"></span>&nbsp;&nbsp;&nbsp;&nbsp;Request for Quote</strong>")
+                                    //.SpriteCssClasses("fa fa-share-square-o text-success fa-3x")                                    
+                                    .HtmlAttributes(new { style = "font-weight: bolder; font-family: 'Franklin Gothic Book'; font-size:larger" })
+                                    .Encoded(false)
+                                    .Items(submitRfQ =>
+                                    {
+                                        submitRfQ.Add().Text("<span style='font-weight:lighter; font-family: 'Franklin Gothic Book'; vertical-align: middle;' class=\"fa fa-plus-square-o text-primary fa-2x fa-fw\"></span>&nbsp;&nbsp;Create new RFQ</strong>")
+                                            .Encoded(false)
+                                            .Action("SubmitRFQ", "Home")
+                                            .HtmlAttributes(new { style = "font-weight: lighter; font-family: 'Franklin Gothic Book'; padding-left: 100px" })
+                                            ;
+                                        submitRfQ.Add().Text("<span style='font-weight:lighter; font-family: 'Franklin Gothic Book'; vertical-align: middle;' class=\"fa fa-pencil-square-o text-success fa-2x fa-fw\"></span>&nbsp;&nbsp;Update Draft RFQ</strong>")
+                                            //.SpriteCssClasses("fa fa-share-square-o")
+                                            .Encoded(false)
+                                            .Action("UpdateRFQ", "Home")
+                                            .HtmlAttributes(new { style = "font-weight: lighter; font-family: 'Franklin Gothic Book'; padding-left: 100px" })
+                                            ;
+                                        submitRfQ.Add().Text("<span style='font-weight:lighter; font-family: 'Franklin Gothic Book'; vertical-align: middle;' class=\"fa fa-eye text-info fa-2x fa-fw\"></span>&nbsp;&nbsp;View & Update RFQ</strong>")
+                                            //.SpriteCssClasses("fa fa-share-square-o")
+                                            .Encoded(false)
+                                            .Action("ViewAckCanRejRfQ", "Home")
+                                            .HtmlAttributes(new { style = "font-weight: lighter; font-family: 'Franklin Gothic Book'; padding-left: 100px" })
+                                            ;
+                                    });
+
+                                panelbar.Add().Text("<span style='font-weight:bolder; font-family: 'Franklin Gothic Book'; vertical-align: middle;' class=\"fa fa-unlock-alt text-info fa-3x fa-fw\"></span>&nbsp;&nbsp;&nbsp;&nbsp;For Buyers Only</strong>")
+                                    //.SpriteCssClasses("indiaFlag")
+                                    .HtmlAttributes(new { style = "font-weight: bolder; font-family: 'Franklin Gothic Book'; font-size:larger" })
+                                    .Encoded(false)
+                                    .Items(buyer =>
+                                    {
+                                        buyer.Add().Text("<span style='font-weight:lighter; font-family: 'Franklin Gothic Book'; vertical-align: middle;' class=\"fa fa-hourglass-start text-primary fa-2x fa-fw\"></span>&nbsp;&nbsp;Acknowledge / Canvass / Update RFQ Status</strong>")
+                                            //.SpriteCssClasses("fa fa-share-square-o")
+                                               .Encoded(false)
+                                               .Action("UpdateRfQStatus", "Home")
+                                               .HtmlAttributes(new { style = "font-weight: lighter; font-family: 'Franklin Gothic Book'; padding-left: 100px" })
+                                               ;
+                                        //buyer.Add().Text("<span style='font-weight:lighter; vertical-align: middle;' class=\"fa fa-pencil-square text-success fa-2x fa-fw\"></span>&nbsp;&nbsp;Update RfQ Status</strong>")
+                                        //    //.SpriteCssClasses("fa fa-share-square-o")
+                                        //    .Encoded(false)
+                                        //    .HtmlAttributes(new { style = "font-weight: lighter; padding-left: 100px" })
+                                        //    ;
+                                    });
+
+                                panelbar.Add().Text("<span style='font-weight:bolder; font-family: 'Franklin Gothic Book'; vertical-align: middle;' class=\"fa fa-file-text-o text-warning fa-3x fa-fw\"></span>&nbsp;&nbsp;&nbsp;&nbsp;Reports</strong>")
+                                    //.SpriteCssClasses("netherlandsFlag")
+                                    .HtmlAttributes(new { style = "font-weight: bolder; font-family: 'Franklin Gothic Book'; font-size:larger" })
+                                    .Encoded(false)
+                                    .Items(reports =>
+                                    {
+                                        reports.Add().Text("<span style='font-weight:lighter; font-family: 'Franklin Gothic Book'; vertical-align: middle;' class=\"fa fa-file-excel-o text-success text-info fa-2x fa-fw\"></span>&nbsp;&nbsp;For Buyers</strong>")
+                                            //.SpriteCssClasses("historyIcon")
+                                            .Encoded(false)
+                                            .Action("ReportsRfQ", "Home")
+                                            .HtmlAttributes(new { style = "font-weight: lighter; font-family: 'Franklin Gothic Book'; padding-left: 100px" })
+                                            ;
+
+                                        reports.Add().Text("<span style='font-weight:lighter; font-family: 'Franklin Gothic Book'; vertical-align: middle;' class=\"fa fa-file-excel-o text-success text-info fa-2x fa-fw\"></span>&nbsp;&nbsp;For Users</strong>")
+                                            //.SpriteCssClasses("historyIcon")
+                                            .Encoded(false)
+                                            .Action("ReportsRfQByOwner", "Home")
+                                            .HtmlAttributes(new { style = "font-weight: lighter; font-family: 'Franklin Gothic Book'; padding-left: 100px" })
+                                            ;
+                                    });
+                            })
+                        )
+                        @*<div class="col-md-2" style="text-align: center; font-weight: bold">
+                            @* <i class="fa fa-share-square-o text-success fa-pulse fa-5x"></i><br /><br /> @*Submit RFQ*@
+            @*@Html.ActionLink("Submit RFQ", "SubmitRFQ", "Home", new { @style = "font-size: larger" })*@
+            @*@(Html.Kendo().PanelBar()
+                                .Name("panelbar")
+                                .ExpandMode(PanelBarExpandMode.Single)
+                                .Items(panelbar =>
+                                {
+                                    panelbar.Add().Text("<span style='font-weight:bold' class=\"fa fa-share-square-o text-success fa-pulse fa-5x\"></span><br />Submit RFQ</strong>")
+                                        //.Expanded(true)   
+                                        .Encoded(false)                                     
+                                        //.SpriteCssClasses("fa fa-share-square-o text-success fa-pulse fa-5x")
+                                        .Content(@<div>
+                                        <div class="teamMate">
+                                            @*<i class="fa fa-share-square-o text-success fa-pulse fa-5x"></i>   *@
+            @*@Html.ActionLink("Create new RfQ", "SubmitRFQ", "Home", new { @style = "font-size: larger" })
+                                        </div>
+                                        @*<div class="teamMate">
+                                            <img src="@Url.Content("~/Content/web/panelbar/nancy.jpg")" alt="Nancy Leverling">
+                                            <h2>Nancy Leverling</h2>
+                                            <p>Sales Associate</p>
+                                        </div>
+                                        <div class="teamMate">
+                                            <img src="@Url.Content("~/Content/web/panelbar/robert.jpg")" alt="Robert King">
+                                            <h2>Robert King</h2>
+                                            <p>Business System Analyst</p>
+                                        </div>*@ @*</div>);                                    
+                                })
+                            )
+                        </div>
+                        <div class="col-md-3">
+                        </div>
+                        <div class="col-md-2" style="text-align: center; font-weight: bold">
+                            <i class="fa fa-pencil-square-o text-primary fa-pulse fa-5x"></i>
+                            <br />
+                            <br />
+                           @* Update RFQ Status*@ @* @Html.ActionLink("Update RFQ Status", "UpdateRfQStatus", "Home", new { @style = "font-size: larger" })
+                            </div>
+                        <div class="col-md-3">
+                        </div>
+                        <div class="col-md-2" style="text-align: center; font-weight: bold">
+                            <i class="fa fa-file-text-o text-warning fa-pulse fa-5x"></i>
+                            <br />
+                            <br />
+                            @*RFQ Report*@ @*@Html.ActionLink(" RFQ Report", "ReportsRfQ", "Home", new { @style = "font-size: larger" })
+                            </div>
+                    </div>*@ @*    </div>*@ @*</div>*@ @*</div>*@ @*</div>*@
+        </div>
+       @* <div style="margin-top: 100px">
+            <div class="container-fluid">
+                @(Html.Kendo().Chart<RFQWebApp.Models.RfqCountChart>()
+                    .Name("chart")
+                    .Title("RFQ Counts (Rolling)")
+                    .DataSource(dataSource => dataSource
+                        .Read(read => read.Action("RfqTransactionsChartSum_Read", "Grid"))
+                        .Group(group => group.Add(model => model.Status))
+                        .Sort(sort => sort.Add(model => model.DateCreated).Descending())
+                        //.Sort(sort => sort.Add(model => model.DateMonthCreated).Descending())
+                    )
+                    .Series(series =>
+                    {
+                        series.Column(model => model.RfqCount)
+                            .Name("#= group.value #");
+                    })
+                    .Legend(legend => legend
+                        .Position(ChartLegendPosition.Top)
+                    )
+                    .ValueAxis(axis => axis.Numeric()
+                        .Labels(labels => labels
+                            .Format("{0:N0}")
+                            .Skip(2)
+                            .Step(2)
+                        )
+                    )
+                    .CategoryAxis(axis => axis
+                        .Categories(model => model.DateCreated)
+                        //.Categories(model => model.DateMonthCreated)
+                    .Labels(labels =>
+                        {
+                            //        labels.Format("MMMM yyyy");
+                            labels.Rotation(-90);
+                        })
+
+                    )
+                    .Tooltip(tooltip => tooltip
+                        .Visible(true)
+                        .Format("{0:N0}")
+                    )
+                )
+            </div>
+        </div>*@
+        @* <div id="chart" style="display: none"></div>
+            <script type="text/jscript">
+                function createChart() {
+
+                    var data = (function () {
+                        var json = null;
+                        $.ajax({
+                            url: '/Grid/RfqTransactionsChartSum_Read/',
+                            type: 'POST',
+                            datatype: 'json',
+                            contentType: 'application/json; charset=utf-8',
+                            success: function (data) {
+
+                                json = data;
+
+                            }  // end of success function
+
+                        }); //end of ajax request      
+                        return json;
+                    })();
+
+                    var ds = new kendo.data.DataSource({
+                        data: data
+                    });
+
+
+                    $("#chart").kendoChart({
+                        dataSource: {
+                            transport: {
+                                read: {
+                                    url: "/Grid/RfqTransactionsChartSum_Read/",
+                                    dataType: "json",
+                                    data: {
+                                        Accept: "application/json"
+                                    }
+                                }
+                            },
+                            group: {
+                                field: "Status"
+                            },
+                            sort: {
+                                field: "DateCreated",
+                                dir: "asc"
+                            }
+                        },
+                        title: {
+                            text: "RFQ Chart"
+                        },
+                        legend: {
+                            position: "top"
+                        },
+                        series: [{
+                            type: "column",
+                            field: "RfqCount",
+                            categoryField: "DateCreated"
+                        }]
+                                            ,
+                                            categoryAxis: {
+                                                field: "DateCreated",
+                                                labels: {
+                                                    rotation: -90
+                                                },
+                                                majorGridLines: {
+                                                    visible: false
+                                                }
+                                            },
+                                            valueAxis: {
+                                                labels: {
+                                                    format: "N0"
+                                                },
+//                                                majorUnit: 1000,
+                                                line: {
+                                                    visible: false
+                                                }
+                                            },
+                                            tooltip: {
+                                                visible: true,
+                                                format: "N0"
+                                            }
+                    });
+                }
+
+                $(document).ready(createChart);
+                $(document).bind("kendo:skinChange", createChart);
+            </script>*@
+    </div>
+</div>

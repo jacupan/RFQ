@@ -1,0 +1,433 @@
+﻿@{
+    ViewBag.Title = "Reports - RFQ";
+}
+<link href="@Url.Content("~/Content/font-awesome.min.css")" rel="stylesheet" type="text/css" />
+<style type="text/css">
+    .k-grid .k-grid-header .k-header .k-link
+    {
+        height: auto;
+    }
+    
+    .k-grid .k-grid-header .k-header
+    {
+        white-space: normal;
+        vertical-align: middle;
+    }
+    
+    @*.k-grid td
+    {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }*@
+
+    .k-grid td
+    {
+        white-space: normal;
+        word-wrap: break-word;
+    }
+
+    .k-grid tr td {
+        border-bottom: 1px solid #7bd2f6;
+    }
+
+    
+    .k-edit-form-container
+    {
+        width: 100%;
+    }
+    
+    .vertical-alignment-helper
+    {
+        display: table;
+        height: 100%;
+        width: 100%;
+    }
+    .vertical-align-center
+    {
+        /* To center vertically */
+        display: table-cell;
+        vertical-align: middle;
+    }
+    
+    .modal-content
+    {
+        /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+        width: inherit;
+        height: inherit; /* To center horizontally */
+        margin: 0 auto;
+    }
+    
+    .k-window div.k-window-content
+    {
+        overflow: hidden;
+    }
+
+    .table th, .table td { 
+         border-top: none !important; 
+    }
+
+    #gridRfqTransactionDetails tr.k-alt {
+        background: transparent ;
+    } 
+</style>
+<input type="hidden" value='@ViewData["userDepartment"]' id="dept" />
+@Html.Hidden("rfqBuyer")
+@Html.Hidden("rfqStat")
+<div class="container-fluid">
+    <div style="margin-top: -10px">
+        <div class="container-fluid">
+            <div class="col-md-8 col-md-offset-2">
+                <h1 style="font-family: Franklin Gothic Book; text-align: center; font-weight: bold;">
+                    RFQ Report by Date Submitted</h1>
+            </div>
+        </div>
+        <div style="margin-top: 100px">
+            <div class="container-fluid">
+                @*<div class="col-md-8 col-md-offset-2">*@ @*<div class="table-responsive">*@
+                <div class="container" style="overflow: auto;">
+                    <table class="table">
+                        <tr>
+                            <td style="text-align: right; font-family: 'Franklin Gothic Book'; vertical-align: bottom">
+                                <label for="buyer">
+                                    Buyer:</label>
+                            </td>
+                            <td style="text-align: center; vertical-align: bottom;">
+                                @(Html.Kendo().ComboBox()
+                                            .Name("cmbBuyers")
+                                            .DataTextField("FullName")
+                                            .DataValueField("Username")
+                                            .Events(ev => ev.Select("onSelectBuyer"))
+                                            .Events(ev => ev.Change("onChangeBuyer"))
+                                            .HtmlAttributes(new { style = "width: 270px; text-transform: uppercase; text-align: center; font-size: medium" })
+                                            .DataSource(source =>
+                                            {
+                                                source.Read(read =>
+                                                {
+                                                    read.Action("BuyerList", "Home");
+                                                });
+                                            })
+                                            .Filter("contains")
+                                            .Placeholder("Select / type buyer...")
+                                            .Suggest(true)
+                                         )
+                            </td>
+                            <td style="text-align: right; font-family: 'Franklin Gothic Book'; vertical-align: bottom">
+                                <label for="Status">
+                                    Item Status:</label>
+                            </td>
+                            <td style="text-align: center; vertical-align: bottom">
+                                @(Html.Kendo().ComboBox()
+                                            .Name("cmbStatuses")
+                                            .DataTextField("ItemStatusCodeDesc")
+                                            .DataValueField("ItemStatusCode")
+                                            .Events(ev => ev.Select("onSelectStatus"))
+                                            .Events(ev => ev.Change("onChangeStatus"))
+                                            .HtmlAttributes(new { style = "width: 270px; text-transform: uppercase; text-align: center; font-size: medium" })
+                                            .DataSource(source =>
+                                            {
+                                                source.Read(read =>
+                                                {
+                                                    read.Action("Statuses", "Home");
+                                                });
+                                            })
+                                            .Filter("contains")
+                                            .Placeholder("Select / type status...")
+                                            .Suggest(true)
+                                         )
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; font-family: 'Franklin Gothic Book'; vertical-align: bottom">
+                                <label for="startDateCreated">
+                                    Date Start From:</label>
+                            </td>
+                            <td style="text-align: center; vertical-align: bottom;">
+                                @(Html.Kendo().DateTimePicker()
+                                                .Name("startDateSubmitted")
+                                                .HtmlAttributes(new { style = "width: 270px; text-transform: uppercase; text-align: center; font-size: medium" })
+                                                .Events(ev => ev.Change("onStartDate"))
+                                         )
+                            </td>
+                            <td style="text-align: right; font-family: 'Franklin Gothic Book'; vertical-align: bottom">
+                                <label for="endDateCreated">
+                                    Date To:</label>
+                            </td>
+                            <td style="text-align: center; vertical-align: bottom">
+                                @(Html.Kendo().DateTimePicker()
+                                                .Name("endDateSubmitted")
+                                                .HtmlAttributes(new { style = "width: 270px; text-transform: uppercase; text-align: center; font-size: medium" })
+                                                .Events(ev => ev.Change("onEndDate"))
+                                          )
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                @*</div>*@ @*</div>*@
+            </div>
+        </div>
+        <div style="margin-top: 30px">
+            <div class="table-responsive">
+                @(Html.Kendo().Grid<RFQWebApp.Models.RfqReportByDateSubmitted>()
+                    .Name("gridRfqTransactionDetails")
+                    .HtmlAttributes(new { style = "height: 500px;" })
+                    .ToolBar(excel =>
+                        {
+                            excel.Excel();
+
+                        })
+                    .Excel(exc => exc.AllPages(true))
+                    .Columns(col =>
+                        {
+                            col.Bound(a => a.Guid)
+                                .Visible(false);
+                            col.Bound(a => a.RfqNumber)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center;" })
+                                .HeaderHtmlAttributes(new { style = "text-align: left" })
+                                .HtmlAttributes(new { style = "text-align: left" })
+                                ;
+                            col.Bound(a => a.ItemDescription)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center;" })
+                                .HeaderHtmlAttributes(new { style = "text-align: left" })
+                                .HtmlAttributes(new { style = "text-align: left" })
+                                .Title("Item Description")
+                                ;
+                            col.Bound(a => a.SupplierItemPN)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center;" })
+                                .HeaderHtmlAttributes(new { style = "text-align: left" })
+                                .HtmlAttributes(new { style = "text-align: left" })
+                                ;
+                            col.Bound(a => a.Quantity)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center;" })
+                                .HeaderHtmlAttributes(new { style = "text-align: right" })
+                                .HtmlAttributes(new { style = "text-align: right" })
+                                ;
+                            col.Bound(a => a.UoM)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center;" })
+                                .HeaderHtmlAttributes(new { style = "text-align: left" })
+                                .HtmlAttributes(new { style = "text-align: left" })
+                                ;
+                            col.Bound(a => a.ItemStatusCodeDesc).Title("Item Status")
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center;" })
+                                .HeaderHtmlAttributes(new { style = "text-align: left" })
+                                .HtmlAttributes(new { style = "text-align: left" })
+                                ;
+                            col.Bound(a => a.Status).Title("Overall Status")
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center;" })
+                                .HeaderHtmlAttributes(new { style = "text-align: left" })
+                                .HtmlAttributes(new { style = "text-align: left" })
+                                ;
+                            col.Bound(a => a.Category)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center;" })
+                                .HeaderHtmlAttributes(new { style = "text-align: left" })
+                                .HtmlAttributes(new { style = "text-align: left" })
+                                ;
+                            col.Bound(a => a.Type)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center;" })
+                                .HeaderHtmlAttributes(new { style = "text-align: left" })
+                                .HtmlAttributes(new { style = "text-align: left" })
+                                ;
+                            col.Bound(a => a.Buyer)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center;" })
+                               .HeaderHtmlAttributes(new { style = "text-align: left" })
+                               .HtmlAttributes(new { style = "text-align: left" })
+                               ;
+                            col.Bound(a => a.ReAssignedBuyerTo)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center;" })
+                                .HeaderHtmlAttributes(new { style = "text-align: left" })
+                                .HtmlAttributes(new { style = "text-align: left" })
+                                ;
+                            col.Bound(a => a.ReAssignedDateTo)
+                              .Format("{0:dd/MM/yyyy HH:mm:ss}")
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center;" })
+                              .HeaderHtmlAttributes(new { style = "text-align: left" })
+                              .HtmlAttributes(new { style = "text-align: left" })
+                              ;
+                            col.Bound(a => a.Department)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center;" })
+                                .HeaderHtmlAttributes(new { style = "text-align: left" })
+                                .HtmlAttributes(new { style = "text-align: left" })
+                                ;
+                            col.Bound(a => a.Comments)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center;" })
+                                .HeaderHtmlAttributes(new { style = "text-align: left" })
+                                .HtmlAttributes(new { style = "text-align: left" })
+                                ;
+                            col.Bound(a => a.Remarks)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center;" })
+                                .HeaderHtmlAttributes(new { style = "text-align: left" })
+                                .HtmlAttributes(new { style = "text-align: left" })
+                                ;
+                            col.Bound(a => a.Feedback)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center;" })
+                            .HeaderHtmlAttributes(new { style = "text-align: left" })
+                            .HtmlAttributes(new { style = "text-align: left" })
+                            ;
+                            col.Bound(a => a.SubmittedBy)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center;" })
+                                .HeaderHtmlAttributes(new { style = "text-align: left" })
+                                .HtmlAttributes(new { style = "text-align: left" })
+                                ;
+                            col.Bound(a => a.DateSubmitted)
+                               .Format("{0:dd/MM/yyyy HH:mm:ss}")
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center;" })
+                               .HeaderHtmlAttributes(new { style = "text-align: left" })
+                               .HtmlAttributes(new { style = "text-align: left" })
+                               ;
+                            col.Bound(a => a.DateAcknowledged)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center;" })
+                               .HeaderHtmlAttributes(new { style = "text-align: left" })
+                               .HtmlAttributes(new { style = "text-align: left" })
+                               .Format("{0:dd/MM/yyyy HH:mm:ss}")
+                               ;
+                            col.Bound(a => a.DateCanvassed)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center;" })
+                               .HeaderHtmlAttributes(new { style = "text-align: left" })
+                               .HtmlAttributes(new { style = "text-align: left" })
+                               .Format("{0:dd/MM/yyyy HH:mm:ss}")
+                               ;
+                            col.Bound(a => a.DateRejected)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center;" })
+                               .HeaderHtmlAttributes(new { style = "text-align: left" })
+                               .HtmlAttributes(new { style = "text-align: left" })
+                               .Format("{0:dd/MM/yyyy HH:mm:ss}")
+                               ;
+                            col.Bound(a => a.DateCompleted)
+                                //.HeaderHtmlAttributes(new { style = "text-align: center; font-weight: bold;" })
+                                //.HtmlAttributes(new { style = "text-align: center;" })
+                               .HeaderHtmlAttributes(new { style = "text-align: left" })
+                               .HtmlAttributes(new { style = "text-align: left" })
+                               .Format("{0:dd/MM/yyyy HH:mm:ss}")
+                               ;
+                        })
+                    .AutoBind(false)
+                    .Groupable()
+                    .Filterable()
+                    .Pageable(pager => pager
+                        .PageSizes(new[] { 20, 40, 60, 80, 100 })                                // Default page sizes are 5, 10 and 20
+                        .Refresh(true).Messages(
+                            messages => messages.Refresh("Click to refresh"))
+                        )
+                    .Sortable()
+                    .Scrollable()
+                    .Resizable(resizable => resizable.Columns(true))
+                        //.Navigatable()
+                    .DataSource(ds =>
+                        {
+                            ds.Ajax()
+                                //.ServerOperation(false)
+                                //.Events(events => events.Error("onGridError"))                              
+                              .Read(read => read.Action("RfqTransDetailsReport_Read", "Grid").Data("additionalInfo"));
+
+                        })
+                        //.Events(e => e.Edit("onGridEdit"))
+                        //.Events(e => e.DataBound("onRowBound").Cancel("onCancel"))
+                )
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        var dept = $("#dept").val();
+        //        alert(dept);
+
+        //        if (dept.trim() != "Purchasing (550)" || dept.trim() != "Information System (582)") {
+        //            window.location.href = '/Home/AccessDenied/';
+        //        }
+
+        if (dept != "Purchasing (550)" && dept != "Information System (582)") {
+            window.location.href = '/Home/AccessDenied/';
+        }
+
+    });
+
+
+    function onStartDate(e) {
+        $("#gridRfqTransactionDetails").data("kendoGrid").dataSource.read();
+    }
+
+    function onEndDate(e) {
+        $("#gridRfqTransactionDetails").data("kendoGrid").dataSource.read();
+
+    }
+
+    function onSelectBuyer(e) {
+
+        //        var dataItem = this.dataItem(e.item);
+
+        //        var cmbBuyerVal = dataItem.FullName;
+
+        //        $('#rfqBuyer').val(cmbBuyerVal);
+
+        //        $("#gridRfqTransactionDetails").data("kendoGrid").dataSource.read();        
+
+        //        $('#rfqBuyer').val("");
+    }
+
+    function onChangeBuyer(e) {
+
+        $("#gridRfqTransactionDetails").data("kendoGrid").dataSource.read();
+
+        //        $(".k-pager-refresh").trigger('click');
+    }
+
+    function onSelectStatus(e) {
+
+        //        var dataItem = this.dataItem(e.item);
+
+        //        var cmbStatVal = dataItem.RfqStatusCodeDesc;
+
+        //        $('#rfqStat').val(cmbStatVal);
+
+        //        $("#gridRfqTransactionDetails").data("kendoGrid").dataSource.read();        
+
+        //        $('#rfqStat').val("");
+    }
+
+    function onChangeStatus(e) {
+
+        $("#gridRfqTransactionDetails").data("kendoGrid").dataSource.read();
+
+        //        $(".k-pager-refresh").trigger('click');
+    }
+
+    function additionalInfo() {
+        var datepickerStart = $("#startDateSubmitted").data("kendoDateTimePicker");
+        var datepickerEnd = $("#endDateSubmitted").data("kendoDateTimePicker");
+        var buyer = $("#cmbBuyers").data("kendoComboBox").text();
+        var status = $("#cmbStatuses").data("kendoComboBox").text();
+
+        return {
+
+            startDateSubmitted: datepickerStart.value() == null ? null : datepickerStart.value(),
+            endDateSubmitted: datepickerEnd.value() == null ? null : datepickerEnd.value(),
+            strBuyer: buyer == "" ? null : buyer,
+            strStat: status == "" ? null : status
+
+        }
+    }
+
+</script>

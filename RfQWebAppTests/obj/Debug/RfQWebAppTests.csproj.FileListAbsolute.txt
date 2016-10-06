@@ -1,0 +1,144 @@
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\obj\Debug\RfQWebAppTests.csprojResolveAssemblyReference.cache
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\RfQWebAppTests.dll.config
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\RfQWebAppTests.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\RfQWebAppTests.pdb
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\RfQWebApp.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\System.Web.Mvc.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\EntityFramework.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\Kendo.Mvc.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\RfQWebApp.pdb
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\System.Web.Mvc.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\EntityFramework.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\Kendo.Mvc.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\bg-BG\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\cs-CZ\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\da-DK\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\de-DE\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\es-ES\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\fr-CA\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\fr-FR\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\it-IT\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\nl-NL\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\pl-PL\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\pt-BR\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\pt-PT\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\ro-RO\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\ru-RU\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\sv-SE\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\tr-TR\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\uk-UA\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\zh-CN\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\obj\Debug\RfQWebAppTests.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\obj\Debug\RfQWebAppTests.pdb
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\AMPICommons.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQWebApp\RfQWebAppTests\bin\Debug\AMPICommons.pdb
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\obj\Debug\RfQWebAppTests.csprojResolveAssemblyReference.cache
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\RfQWebAppTests.dll.config
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\RfQWebAppTests.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\RfQWebAppTests.pdb
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\RfQWebApp.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\System.Web.Mvc.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\EntityFramework.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\Kendo.Mvc.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\AMPICommons.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\RfQWebApp.pdb
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\System.Web.Mvc.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\EntityFramework.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\Kendo.Mvc.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\AMPICommons.pdb
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\bg-BG\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\cs-CZ\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\da-DK\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\de-DE\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\es-ES\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\fr-CA\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\fr-FR\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\it-IT\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\nl-NL\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\pl-PL\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\pt-BR\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\pt-PT\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\ro-RO\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\ru-RU\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\sv-SE\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\tr-TR\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\uk-UA\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\bin\Debug\zh-CN\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\obj\Debug\RfQWebAppTests.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification\RfQWebAppTests\obj\Debug\RfQWebAppTests.pdb
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\RfQWebAppTests.dll.config
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\RfQWebAppTests.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\RfQWebAppTests.pdb
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\RfQWebApp.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\System.Web.Mvc.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\EntityFramework.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\Kendo.Mvc.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\AMPICommons.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\RfQWebApp.pdb
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\System.Web.Mvc.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\EntityFramework.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\Kendo.Mvc.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\AMPICommons.pdb
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\bg-BG\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\cs-CZ\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\da-DK\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\de-DE\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\es-ES\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\fr-CA\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\fr-FR\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\it-IT\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\nl-NL\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\pl-PL\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\pt-BR\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\pt-PT\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\ro-RO\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\ru-RU\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\sv-SE\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\tr-TR\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\uk-UA\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\bin\Debug\zh-CN\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\obj\Debug\RfQWebAppTests.csprojResolveAssemblyReference.cache
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\obj\Debug\RfQWebAppTests.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl\RfQWebAppTests\obj\Debug\RfQWebAppTests.pdb
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\RfQWebAppTests.dll.config
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\RfQWebAppTests.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\RfQWebAppTests.pdb
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\RfQWebApp.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\System.Web.Mvc.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\EntityFramework.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\Kendo.Mvc.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\AMPICommons.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\RfQWebApp.pdb
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\System.Web.Mvc.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\EntityFramework.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\Kendo.Mvc.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\AMPICommons.pdb
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\bg-BG\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\cs-CZ\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\da-DK\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\de-DE\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\es-ES\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\fr-CA\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\fr-FR\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\it-IT\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\nl-NL\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\pl-PL\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\pt-BR\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\pt-PT\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\ro-RO\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\ru-RU\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\sv-SE\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\tr-TR\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\uk-UA\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\bin\Debug\zh-CN\Kendo.Mvc.resources.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\obj\Debug\RfQWebAppTests.csprojResolveAssemblyReference.cache
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\obj\Debug\RfQWebAppTests.dll
+C:\Users\jacupan\Documents\Visual Studio 2010\Projects\RfQ Project\RfQWebApp_withMailNotification_UoMDdl_UserAttachment\RfQWebAppTests\obj\Debug\RfQWebAppTests.pdb
